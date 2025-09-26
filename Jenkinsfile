@@ -25,7 +25,7 @@ pipeline {
       }
     }
 
-    // 🟡 Ось ця частина — архівація HTML-звіту Playwright
+    // 🟡 Архівація HTML-звіту Playwright
     stage('Archive Report') {
       steps {
         archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
@@ -45,5 +45,5 @@ pipeline {
         mimeType: 'text/html'
       )
     }
-  }s
+  }
 }
