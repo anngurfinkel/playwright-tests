@@ -1,0 +1,29 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "commonjs",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx playwright test --reporter=html",
+    "send": "node sendReport.js",
+    "test:send": "npm run test && npm run send"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^22.14.0"
+  },
+  "dependencies": {
+    "fsevents": "^2.3.2",
+    "nodemailer": "^7.0.6",
+    "playwright": "^1.51.1",
+    "playwright-core": "^1.51.1",
+    "undici-types": "^6.21.0"
+  }
+}
