@@ -1,15 +1,19 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/usr/local/bin:$PATH"
+    }
+
     stages {
         stage('Install dependencies') {
             steps {
-                sh 'npm ci'
+                sh '/usr/local/bin/npm ci'
             }
         }
         stage('Run tests') {
             steps {
-                sh 'npx playwright test --reporter=html'
+                sh '/usr/local/bin/npx playwright test --reporter=html'
             }
         }
         stage('Archive report') {
