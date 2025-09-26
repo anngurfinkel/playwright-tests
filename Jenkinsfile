@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    nodejs 'NodeJS_22'
+  }
+
   environment {
     PLAYWRIGHT_BROWSERS_PATH = './node_modules/playwright/.local-browsers'
   }
@@ -12,6 +16,15 @@ pipeline {
       }
     }
 
+    stage('Check npm') {
+      steps {
+        sh 'which npm'
+        sh 'which node'
+        sh 'npm --version'
+        sh 'node --version'
+      }
+    }
+
     stage('Install dependencies') {
       steps {
         sh 'npm ci'
@@ -20,12 +33,10 @@ pipeline {
 
     stage('Run tests') {
       steps {
-        // Завжди повертає 0, щоб pipeline не падав
         sh 'npx playwright test --reporter=html || true'
       }
     }
 
-    // 🟡 Архівація HTML-звіту Playwright
     stage('Archive Report') {
       steps {
         archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
@@ -44,6 +55,7 @@ pipeline {
         to: 'ahurfinkel@labelyourdata.com',
         mimeType: 'text/html'
       )
+      cleanWs()
     }
   }
 }
