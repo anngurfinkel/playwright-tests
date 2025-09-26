@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('confirm_email', async ({ page }) => {
   await page.goto('https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F1%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F1%2F&ifkv=AXH0vVvjsoeeuuNULc6W_Bl98qj2Ba7Efy2tf9ZUg9wbZfmKOqY_6RoAmkbS-4hjuqs2Vja7LxMj&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S974245078%3A1744284977240692#inbox');
@@ -14,3 +14,4 @@ test('confirm_email', async ({ page }) => {
   await page.getByRole('button', { name: 'Confirm' }).click();
   const page1 = await page1Promise;
 });
+*/

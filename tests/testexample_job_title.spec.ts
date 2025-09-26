@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('job_title', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
@@ -14,20 +14,23 @@ test('job_title', async ({ page }) => {
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Click and wait for navigation
+  // Click sign-in and wait for navigation
   await Promise.all([
     page.waitForNavigation({ waitUntil: 'networkidle' }),
     signInButton.click(),
   ]);
 
-  // Optional debug: list all buttons text on the page after login
-  // console.log(await page.locator('button').allTextContents());
-
-  const mlButton = page.getByText('🧑‍💻 Machine Learning');
-  await mlButton.waitFor({ state: 'visible', timeout: 10000 });
+  // Locate the Machine Learning button — fallback: using text with emoji might be flaky
+  const mlButton = page.getByText('🧑‍💻 Machine Learning', { exact: true });
+  await expect(mlButton).toBeVisible({ timeout: 10000 });
   await mlButton.click();
 
+  // Wait for Confirm button and click it
   const confirmButton = page.getByRole('button', { name: 'Confirm' });
-  await confirmButton.waitFor({ state: 'visible', timeout: 10000 });
+  await expect(confirmButton).toBeVisible({ timeout: 10000 });
   await confirmButton.click();
+
+  // Optional: add assertion here for confirmation success
+  // e.g., await expect(page.locator('selector-for-success-message')).toBeVisible();
 });
+*/

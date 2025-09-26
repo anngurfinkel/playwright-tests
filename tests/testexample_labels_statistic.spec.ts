@@ -13,28 +13,33 @@ test('labels_statistic', async ({ page }) => {
     page.getByTestId('sign-in-btn').click(),
   ]);
 
-  // Select project
-  await page.getByRole('cell', { name: 'Project_test1 object_detection' }).locator('div').first().click();
+  // Select project by clicking the first div inside the cell with the project name
+  const projectCell = page.getByRole('cell', { name: 'Project_test1 object_detection' });
+  await expect(projectCell).toBeVisible();
+  await projectCell.locator('div').first().click();
 
-  // Open dropdown and click "Labels statistic"
-  await page.getByTestId('ui_dropdown_title').locator('path').click();
-  await page.getByTestId('ui_dropdown_content')
-    .locator('div')
-    .filter({ hasText: 'Labels statistic' })
-    .click();
+  // Open dropdown menu by clicking the dropdown title container (better than clicking SVG path)
+  const dropdownTitle = page.getByTestId('ui_dropdown_title');
+  await expect(dropdownTitle).toBeVisible();
+  await dropdownTitle.click();
 
-  // Wait for #portal_root to be attached to the DOM (not necessarily visible)
+  // Click "Labels statistic" option in dropdown content
+  const labelsStatisticOption = page.getByTestId('ui_dropdown_content').getByText('Labels statistic');
+  await expect(labelsStatisticOption).toBeVisible();
+  await labelsStatisticOption.click();
+
+  // Wait for #portal_root to be attached (added to DOM)
   const portalRoot = page.locator('#portal_root');
   await portalRoot.waitFor({ state: 'attached', timeout: 10000 });
 
-  // Check if it's visible before interacting
+  // Check if #portal_root is visible before interacting
   if (await portalRoot.isVisible()) {
     const imgElement = portalRoot.getByRole('img');
-    await imgElement.waitFor({ state: 'visible', timeout: 10000 });
+    await expect(imgElement).toBeVisible({ timeout: 10000 });
     await imgElement.scrollIntoViewIfNeeded();
     await imgElement.click();
   } else {
-    console.log('⚠️ #portal_root is present but not visible — skipping image interaction.');
+    console.warn('⚠️ #portal_root is present but not visible — skipping image interaction.');
     await expect(portalRoot).toBeHidden(); // Optional assertion
   }
 });

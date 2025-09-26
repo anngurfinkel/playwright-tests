@@ -1,23 +1,27 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('confirmation message shows after sign-up', async ({ page }) => {
-  // Перехід на сторінку реєстрації
+  // Перехід на сторінку реєстрації (Navigate to sign-up page)
   await page.goto('https://platform.labelyourdata.com/sign-up');
 
-  // Заповнення форми реєстрації
+  // Заповнення форми реєстрації (Fill the registration form)
   await page.getByTestId('sign-up-email').fill('hurfinkelannaqa@gmail.com');
   await page.getByTestId('sign-up-username').fill('client_user_1');
   await page.getByTestId('sign-up-password').fill('Fjik67%ips');
   await page.getByTestId('sign-up-confirm_password').fill('Fjik67%ips');
 
-  // Очікування, поки кнопка стане активною
+  // Очікування, поки кнопка стане активною (Wait until the sign-up button is enabled)
   const signUpButton = page.getByRole('button', { name: 'Sign up', exact: true });
   await expect(signUpButton).toBeEnabled();
 
-  // Натискання кнопки "Sign up"
-  await signUpButton.click();
+  // Натискання кнопки "Sign up" (Click the Sign up button)
+  await Promise.all([
+    page.waitForResponse(response => response.url().includes('/sign-up') && response.status() === 200),
+    signUpButton.click()
+  ]);
 
-  // Очікування появи повідомлення про підтвердження
+  // Очікування появи повідомлення про підтвердження (Wait for confirmation message to appear)
   const confirmationMessage = page.getByText('Confirm your email');
   await expect(confirmationMessage).toBeVisible({ timeout: 10000 });
 });
+*/

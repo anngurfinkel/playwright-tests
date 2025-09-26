@@ -8,8 +8,12 @@ test('calculator', async ({ page }) => {
   await page.getByTestId('sign-in-btn').click();
 
   // Wait for the 'Calculator' link to appear as a sign of successful login
-  await expect(page.getByRole('link', { name: 'Calculator' })).toBeVisible({ timeout: 10000 });
+  const calculatorLink = page.getByRole('link', { name: 'Calculator' });
+  await expect(calculatorLink).toBeVisible({ timeout: 10000 });
 
-  // Now safely click the Calculator link
-  await page.getByRole('link', { name: 'Calculator' }).click();
+  // Click the Calculator link and wait for navigation to complete
+  await Promise.all([
+    page.waitForNavigation(),
+    calculatorLink.click()
+  ]);
 });

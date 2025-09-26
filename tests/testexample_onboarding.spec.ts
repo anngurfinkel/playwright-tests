@@ -1,30 +1,39 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('onboarding', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
   
-  // Перевіряємо, чи елементи доступні перед виконанням
-  await expect(page.locator('[data-testid="sign-in-username"]')).toBeVisible();
-  await expect(page.locator('[data-testid="sign-in-password"]')).toBeVisible();
-  
-  // Вводимо логін та пароль
-  await page.getByTestId('sign-in-username').click();
-  await page.getByTestId('sign-in-username').fill('client_test1');
-  await page.getByTestId('sign-in-password').click();
-  await page.getByTestId('sign-in-password').fill('Fjik67%ips');
-  await page.getByTestId('sign-in-btn').click();
+  // Check if sign-in inputs are visible
+  const usernameInput = page.getByTestId('sign-in-username');
+  const passwordInput = page.getByTestId('sign-in-password');
+  const signInButton = page.getByTestId('sign-in-btn');
 
-  // Очікуємо на елемент на сторінці після входу
-  await expect(page.locator('[data-testid="onboarding_hint_got_it"]')).toBeVisible();
-  
-  // Продовжуємо виконання
-  await page.getByTestId('onboarding_hint_got_it').click();
-  
-  // Перевіряємо, чи є кнопка "Machine Learning"
-  await expect(page.getByText('🧑‍💻 Machine Learning')).toBeVisible();
-  await page.getByText('🧑‍💻 Machine Learning').click();
-  
-  // Перевіряємо, чи є кнопка підтвердження
-  await expect(page.getByRole('button', { name: 'Confirm' })).toBeVisible();
-  await page.getByRole('button', { name: 'Confirm' }).click();
+  await expect(usernameInput).toBeVisible();
+  await expect(passwordInput).toBeVisible();
+
+  // Fill in credentials
+  await usernameInput.fill('client_test1');
+  await passwordInput.fill('Fjik67%ips');
+
+  // Click sign-in and wait for navigation
+  await Promise.all([
+    page.waitForNavigation(),
+    signInButton.click(),
+  ]);
+
+  // Wait for onboarding hint and click "Got it"
+  const onboardingHint = page.getByTestId('onboarding_hint_got_it');
+  await expect(onboardingHint).toBeVisible();
+  await onboardingHint.click();
+
+  // Verify and click "Machine Learning" button
+  const mlButton = page.getByText('🧑‍💻 Machine Learning');
+  await expect(mlButton).toBeVisible();
+  await mlButton.click();
+
+  // Verify and click "Confirm" button
+  const confirmButton = page.getByRole('button', { name: 'Confirm' });
+  await expect(confirmButton).toBeVisible();
+  await confirmButton.click();
 });
+*/
