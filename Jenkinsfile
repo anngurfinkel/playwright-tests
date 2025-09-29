@@ -52,7 +52,7 @@ pipeline {
           <p>Build result: ${currentBuild.currentResult}</p>
           <p><a href="${env.BUILD_URL}artifact/playwright-report/index.html">🔍 View Playwright Report</a></p>
         """,
-        to: 'ahurfinkel@labelyourdata.com',
+        to: 'ann.gurfinkel@gmail.com',
         mimeType: 'text/html'
       )
       cleanWs()
