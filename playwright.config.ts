@@ -3,23 +3,23 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
 
-  /* Паралельне виконання */
+  /* Запуск тестів паралельно */
   fullyParallel: true,
 
   /* Заборонити test.only на CI */
   forbidOnly: !!process.env.CI,
 
-  /* Ретрай тести на CI */
+  /* Кількість повторів на CI */
   retries: process.env.CI ? 2 : 0,
 
-  /* Один воркер на CI */
+  /* Кількість воркерів на CI */
   workers: process.env.CI ? 1 : undefined,
 
-  /* HTML репортер */
-  reporter: [['html', { open: 'never' }]],
+  /* Конфігурація репортера — html звіт у playwright-report */
+  reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
 
   use: {
-    /* Збирати trace при першому фейлі */
+    /* Збирати трасування при першому падінні */
     trace: 'on-first-retry',
   },
 
