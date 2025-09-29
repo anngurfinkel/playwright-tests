@@ -24,20 +24,16 @@ pipeline {
 
     stage('Run Playwright tests') {
       steps {
+        // Тести запускаються і навіть якщо падають — далі йде репорт
         sh 'npx playwright test || true'
-      }
-    }
-
-    stage('Generate HTML Report') {
-      steps {
         sh 'npx playwright show-report --output=html-report'
       }
     }
 
-    stage('Check report exists') {
+    stage('Check Report Exists') {
       steps {
-        sh 'ls -l html-report'
-        sh 'ls -l html-report/assets'
+        sh 'ls -la html-report'
+        sh 'cat html-report/index.html | head -n 20'
       }
     }
 
