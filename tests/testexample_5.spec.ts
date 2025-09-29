@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('job_title', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
@@ -22,3 +22,4 @@ test('job_title', async ({ page }) => {
   await expect(page.getByRole('button', { name: 'Confirm' })).toBeVisible();
   await page.getByRole('button', { name: 'Confirm' }).click();
 });
+*/

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('1234567', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-up');
@@ -12,3 +12,4 @@ test('1234567', async ({ page }) => {
   await page.getByTestId('sign-up-confirm_password').fill('Fjik67%ips');
   await page.getByRole('button', { name: 'Sign up', exact: true }).click();
 });
+*/

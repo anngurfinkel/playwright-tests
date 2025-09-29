@@ -6,6 +6,7 @@ pipeline {
   }
 
   environment {
+    // Встановлюємо шлях для кешу Playwright браузерів
     PLAYWRIGHT_BROWSERS_PATH = './node_modules/playwright/.local-browsers'
   }
 
@@ -22,13 +23,20 @@ pipeline {
       }
     }
 
+    stage('Install Playwright Browsers') {
+      steps {
+        // Обов'язково встановлюємо браузери, щоб уникнути помилок
+        sh 'npx playwright install --with-deps'
+      }
+    }
+
     stage('Run Playwright tests') {
       steps {
-        // Запускаємо тести, навіть якщо є фейли
+        // Запускаємо тести, навіть якщо є фейли (щоб не зупинило pipeline)
         sh 'npx playwright test || true'
 
         // Копіюємо звіт у окрему папку, яку архівуємо
-        sh 'cp -r playwright-report html-report'
+        sh 'cp -r playwright-report html-report || echo "No report found"'
       }
     }
 
@@ -65,7 +73,7 @@ pipeline {
         subject: "📋 Playwright Report - ${currentBuild.fullDisplayName}",
         body: """
           <p><strong>Build result:</strong> ${currentBuild.currentResult}</p>
-          <p>✅ <a href="${env.BUILD_URL}Playwright_20Report">Переглянути Playwright звіт</a></p>
+          <p>✅ <a href="${env.BUILD_URL}Playwright_Report">Show Playwright report</a></p>
         """,
         to: 'ann.gurfinkel@gmail.com',
         mimeType: 'text/html'

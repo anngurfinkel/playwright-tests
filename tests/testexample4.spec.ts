@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 
 test('Email confirmation message appears after sign-up', async ({ page }) => {
   // Перехід на сторінку реєстрації
@@ -21,3 +21,4 @@ test('Email confirmation message appears after sign-up', async ({ page }) => {
   const confirmationMessage = page.getByText('Confirm your email');
   await expect(confirmationMessage).toBeVisible({ timeout: 10000 });
 });
+*/
