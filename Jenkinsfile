@@ -33,6 +33,7 @@ pipeline {
 
     stage('Run tests') {
       steps {
+        // Запускаємо тести Playwright з html-звітом, навіть якщо тести падають (|| true)
         sh 'npx playwright test --reporter=html || true'
       }
     }
