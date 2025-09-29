@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-    nodejs 'NodeJS_22'
+    nodejs 'NodeJS_22' // заміни на свою NodeJS версію в Jenkins
   }
 
   environment {
@@ -24,27 +24,32 @@ pipeline {
 
     stage('Run Playwright tests') {
       steps {
-        // Тести запускаються і навіть якщо падають — далі йде репорт
+        // Запуск тестів, навіть якщо падають, щоб далі згенерувати звіт
         sh 'npx playwright test || true'
+        // Генерація повноцінного HTML-звіту в окрему папку
         sh 'npx playwright show-report --output=html-report'
       }
     }
 
     stage('Check Report Exists') {
       steps {
-        sh 'ls -la html-report'
-        sh 'cat html-report/index.html | head -n 20'
+        echo "🧐 Перевірка наявності html-report:"
+        sh 'ls -la'
+        sh 'ls -la html-report || echo "❌ html-report НЕ знайдено!"'
+        sh 'test -f html-report/index.html && echo "✅ index.html є!" || echo "❌ index.html НЕ знайдено!"'
       }
     }
 
     stage('Archive HTML Report') {
       steps {
+        echo "📦 Архівація html-report у Jenkins артефакти"
         archiveArtifacts artifacts: 'html-report/**', fingerprint: true
       }
     }
 
     stage('Publish Playwright Report') {
       steps {
+        echo "🌐 Публікація HTML-звіту через HTML Publisher плагін"
         publishHTML([
           allowMissing: false,
           alwaysLinkToLastBuild: true,
@@ -59,15 +64,19 @@ pipeline {
 
   post {
     always {
+      echo "📧 Надсилання email з посиланням на звіт"
       emailext (
-        subject: "Playwright Report - ${currentBuild.fullDisplayName}",
+        subject: "📋 Playwright Report - ${currentBuild.fullDisplayName}",
         body: """
-          <p>🔧 Build result: <strong>${currentBuild.currentResult}</strong></p>
-          <p>📄 <a href="${env.BUILD_URL}Playwright_20Report">Відкрити Playwright звіт</a></p>
+          <p><strong>Build result:</strong> ${currentBuild.currentResult}</p>
+          <p>✅ <a href="${env.BUILD_URL}Playwright_20Report">Переглянути Playwright звіт</a></p>
+          <p>📁 <a href="${env.BUILD_URL}artifact/html-report/index.html">Завантажити як файл</a></p>
         """,
         to: 'ann.gurfinkel@gmail.com',
         mimeType: 'text/html'
       )
+
+      echo "🧹 Очистка воркспейсу"
       cleanWs()
     }
   }
