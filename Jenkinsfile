@@ -6,7 +6,6 @@ pipeline {
   }
 
   environment {
-    // Встановлюємо шлях для кешу Playwright браузерів
     PLAYWRIGHT_BROWSERS_PATH = './node_modules/playwright/.local-browsers'
   }
 
@@ -25,35 +24,48 @@ pipeline {
 
     stage('Install Playwright Browsers') {
       steps {
-        // Обов'язково встановлюємо браузери, щоб уникнути помилок
         sh 'npx playwright install --with-deps'
       }
     }
 
     stage('Run Playwright tests') {
       steps {
-        // Запускаємо тести, навіть якщо є фейли (щоб не зупинило pipeline)
-        sh 'npx playwright test || true'
-
-        // Копіюємо звіт у окрему папку, яку архівуємо
-        sh 'cp -r playwright-report html-report || echo "No report found"'
+        script {
+          // Запускаємо тести. Якщо є фейли — pipeline продовжиться
+          def result = sh(script: 'npx playwright test || true', returnStatus: true)
+          // Зберігаємо код для перевірки пізніше
+          currentBuild.description = "Test status code: ${result}"
+          env.TEST_EXIT_CODE = result.toString()
+          sh 'cp -r playwright-report html-report || echo "No report found"'
+        }
       }
     }
 
-    stage('Перевірка репорту') {
+    stage('Check Report') {
       steps {
         sh 'ls -la html-report'
         sh 'test -f html-report/index.html && echo "✅ index.html існує!" || echo "❌ index.html НЕ знайдено!"'
       }
     }
 
-    stage('Archive HTML Report') {
+    stage('Archive Artifacts') {
       steps {
         archiveArtifacts artifacts: 'html-report/**', fingerprint: true
+        archiveArtifacts artifacts: 'test-results/**/*.zip', fingerprint: true
       }
     }
 
-    stage('Publish Playwright Report') {
+    stage('Generate PDF Report') {
+      steps {
+        sh '''
+          npm install -g html-pdf-cli || true
+          html-pdf html-report/index.html report.pdf || echo "PDF generation failed"
+        '''
+        archiveArtifacts artifacts: 'report.pdf', fingerprint: true
+      }
+    }
+
+    stage('Publish Playwright HTML Report') {
       steps {
         publishHTML([
           allowMissing: false,
@@ -65,6 +77,17 @@ pipeline {
         ])
       }
     }
+
+    stage('Fail if tests failed') {
+      when {
+        expression {
+          return env.TEST_EXIT_CODE != '0'
+        }
+      }
+      steps {
+        error("❌ Playwright tests failed. Exit code: ${env.TEST_EXIT_CODE}")
+      }
+    }
   }
 
   post {
@@ -73,7 +96,8 @@ pipeline {
         subject: "📋 Playwright Report - ${currentBuild.fullDisplayName}",
         body: """
           <p><strong>Build result:</strong> ${currentBuild.currentResult}</p>
-          <p>✅ <a href="${env.BUILD_URL}Playwright_Report">Show Playwright report</a></p>
+          <p>✅ <a href="${env.BUILD_URL}Playwright_Report">Show Playwright HTML report</a></p>
+          <p>📎 PDF Report and traces archived as artifacts.</p>
         """,
         to: 'ann.gurfinkel@gmail.com',
         mimeType: 'text/html'
