@@ -66,7 +66,6 @@ pipeline {
         body: """
           <p><strong>Build result:</strong> ${currentBuild.currentResult}</p>
           <p>✅ <a href="${env.BUILD_URL}Playwright_20Report">Переглянути Playwright звіт</a></p>
-          <p>📁 <a href="${env.BUILD_URL}artifact/html-report/index.html">Завантажити як файл</a></p>
         """,
         to: 'ann.gurfinkel@gmail.com',
         mimeType: 'text/html'

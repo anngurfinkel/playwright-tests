@@ -7,13 +7,16 @@ test('calculator', async ({ page }) => {
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
   await page.getByTestId('sign-in-btn').click();
 
-  // Wait for the 'Calculator' link to appear as a sign of successful login
+  // Чекаємо, що посилання "Calculator" з'явиться
   const calculatorLink = page.getByRole('link', { name: 'Calculator' });
   await expect(calculatorLink).toBeVisible({ timeout: 10000 });
 
-  // Click the Calculator link and wait for navigation to complete
+  // Клікаємо по посиланню і чекаємо на зміну URL (на сторінку калькулятора)
   await Promise.all([
-    page.waitForNavigation(),
-    calculatorLink.click()
+    page.waitForURL('**/calculator'), // замініть на правильний шлях, якщо інший
+    calculatorLink.click(),
   ]);
+
+  // Перевіряємо, що URL дійсно змінився на сторінку калькулятора
+  await expect(page).toHaveURL(/calculator/);
 });

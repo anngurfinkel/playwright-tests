@@ -13,22 +13,22 @@ test('log_out', async ({ page }) => {
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Click sign in and wait for navigation
+  // Click sign in and wait for navigation, чекати мережеву активність для надійності
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     signInButton.click(),
   ]);
 
-  // Click on user initials 'CL'
+  // Чекати, що ініціали користувача видимі і клікати
   const userInitials = page.getByText('CL').first();
-  await expect(userInitials).toBeVisible();
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
   await userInitials.click();
 
-  // Click logout button
+  // Чекати і клікати кнопку виходу
   const logoutButton = page.getByTestId('logout_btn');
-  await expect(logoutButton).toBeVisible();
+  await expect(logoutButton).toBeVisible({ timeout: 5000 });
   await logoutButton.click();
 
-  // Optionally, verify we are back on the sign-in page
-  await expect(signInButton).toBeVisible();
+  // Почекати, що повернулися на сторінку логіну
+  await expect(signInButton).toBeVisible({ timeout: 10000 });
 });

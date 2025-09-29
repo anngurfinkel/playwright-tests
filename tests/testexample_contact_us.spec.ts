@@ -21,14 +21,15 @@ test('contact_us', async ({ page }) => {
     contactUsLink.click(),
   ]);
 
-  const messageBox = page.getByRole('textbox', { name: 'e.g. I’m looking to set up' });
+  // Якщо "e.g. I’m looking to set up" - це placeholder, краще так:
+  const messageBox = page.getByPlaceholder('e.g. I’m looking to set up');
   await expect(messageBox).toBeVisible();
   await messageBox.fill('test117');
 
   await page.getByTestId('contact_us_confirm').click();
 
-  // Assuming this is a close button or similar, wait for visibility first
-  const closeButton = page.locator('#portal_root span path');
+  // Краще клікати на більш надійний селектор, наприклад кнопку, а не path в SVG
+  const closeButton = page.locator('#portal_root button'); // припустимо, що це кнопка
   await expect(closeButton).toBeVisible();
   await closeButton.click();
 });

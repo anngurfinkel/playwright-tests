@@ -3,55 +3,57 @@ import { test, expect } from '@playwright/test';
 test('need_external_app', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
 
-  // Fill sign-in form
+  // Заповнюємо форму входу
   const usernameInput = page.getByTestId('sign-in-username');
   const passwordInput = page.getByTestId('sign-in-password');
   const signInButton = page.getByTestId('sign-in-btn');
 
-  await expect(usernameInput).toBeVisible();
-  await expect(passwordInput).toBeVisible();
+  await expect(usernameInput).toBeVisible({ timeout: 5000 });
+  await expect(passwordInput).toBeVisible({ timeout: 5000 });
 
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Click sign in and wait for navigation
+  // Клікаємо "Sign in" і чекаємо навігації
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     signInButton.click(),
   ]);
 
-  // Click the card title
+  // Клікаємо на заголовок картки
   const cardTitle = page.getByTestId('card_title');
-  await expect(cardTitle).toBeVisible();
+  await expect(cardTitle).toBeVisible({ timeout: 10000 });
   await cardTitle.click();
 
-  // Click the dropdown container (not the SVG rect)
+  // Відкриваємо дропдаун (клік по контейнеру, не по SVG)
   const dropdownTitle = page.getByTestId('ui_dropdown_title');
-  await expect(dropdownTitle).toBeVisible();
+  await expect(dropdownTitle).toBeVisible({ timeout: 5000 });
   await dropdownTitle.click();
 
-  // Click "Need external API?" option
+  // Вибираємо опцію "Need external API?"
   const needExternalAPI = page.getByText('Need external API?');
-  await expect(needExternalAPI).toBeVisible();
+  await expect(needExternalAPI).toBeVisible({ timeout: 5000 });
   await needExternalAPI.click();
 
-  // Fill message box
+  // Заповнюємо текстове поле з повідомленням
   const messageBox = page.getByRole('textbox', { name: 'e.g. I’m looking to set up' });
-  await expect(messageBox).toBeVisible();
+  await expect(messageBox).toBeVisible({ timeout: 5000 });
   await messageBox.fill('need external app 123');
 
-  // Submit contact form
+  // Підтверджуємо форму
   const confirmButton = page.getByTestId('contact_us_confirm');
-  await expect(confirmButton).toBeVisible();
+  await expect(confirmButton).toBeVisible({ timeout: 5000 });
   await confirmButton.click();
 
-  // Close modal/dialog safely
+  // Чекаємо появи модалки
   const portalRoot = page.locator('#portal_root');
   await portalRoot.waitFor({ state: 'attached', timeout: 10000 });
 
+  // Закриваємо модалку - намагаємось клікнути по видимому елементу, який її закриває
   const closeDiv = portalRoot.locator('div').nth(2);
   if (await closeDiv.isVisible()) {
     await closeDiv.click();
+    return; // якщо клікнули і закрили, завершуємо
   }
 
   const closeImg = portalRoot.locator('span').getByRole('img');

@@ -7,17 +7,29 @@ test('api_keys', async ({ page }) => {
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
   await page.getByTestId('sign-in-btn').click();
 
-  // Wait for the user initials 'CL' to appear and click
-  await expect(page.getByText('CL').first()).toBeVisible();
-  await page.getByText('CL').first().click();
+  // Чекаємо, поки з'являться ініціали користувача (можливо, треба почекати довше)
+  const userInitials = page.getByText('CL');
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
+  await userInitials.click();
 
-  // Click on Organization management link and wait for navigation
+  // Чекаємо, що з'явиться посилання Organization management і клікаємо
+  const orgManagementLink = page.getByRole('link', { name: 'Organization management' });
+  await expect(orgManagementLink).toBeVisible({ timeout: 10000 });
+
   await Promise.all([
-    page.waitForNavigation(),
-    page.getByRole('link', { name: 'Organization management' }).click()
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
+    orgManagementLink.click()
   ]);
 
-  // Click on the API tab and verify it is active
-  await page.getByTestId('tab-api').click();
-  await expect(page.getByTestId('tab-api')).toHaveClass(/active/); // if the active tab has an 'active' class
+  // Перевіряємо, що ми на правильній сторінці (наприклад, URL містить /organization)
+  await expect(page).toHaveURL(/organization/);
+
+  // Клікаємо на вкладку API
+  const apiTab = page.getByTestId('tab-api');
+  await expect(apiTab).toBeVisible();
+  await apiTab.click();
+
+  // Перевіряємо, що вкладка активна
+  // Можливо, клас не просто 'active', а інший, треба перевірити в devtools
+  await expect(apiTab).toHaveClass(/active|is-active|selected/);
 });

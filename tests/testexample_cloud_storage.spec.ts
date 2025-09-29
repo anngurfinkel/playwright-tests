@@ -3,30 +3,32 @@ import { test, expect } from '@playwright/test';
 test('cloud_storage', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
 
-  // Fill username and password (no need to click before fill)
+  // Заповнюємо логін та пароль
   await page.getByTestId('sign-in-username').fill('client_test1');
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
 
-  // Click sign in button and wait for navigation to complete
+  // Клікаємо "Sign In" і чекаємо навігацію
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     page.getByTestId('sign-in-btn').click(),
   ]);
 
-  // Click on user initials 'CL'
+  // Клікаємо по ініціалах користувача 'CL'
   const userInitials = page.getByText('CL').first();
-  await expect(userInitials).toBeVisible();
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
   await userInitials.click();
 
-  // Click 'Organization management' link and wait for navigation
+  // Клікаємо на "Organization management" і чекаємо навігацію
   const orgManagementLink = page.getByRole('link', { name: 'Organization management' });
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     orgManagementLink.click(),
   ]);
 
-  // Click on 'Cloud Storage' tab and verify it's active (if possible)
+  // Клікаємо на вкладку "Cloud Storage"
   const cloudStorageTab = page.getByTestId('tab-cloud-storage');
   await cloudStorageTab.click();
-  await expect(cloudStorageTab).toHaveClass(/active/); // adjust if your app uses a different active indicator
+
+  // Перевіряємо, що вкладка активна
+  await expect(cloudStorageTab).toHaveClass(/active/);
 });

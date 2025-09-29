@@ -3,17 +3,17 @@ import { test, expect } from '@playwright/test';
 test('sign_in', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
 
-  // Fill username and password without extra clicks
+  // Заповнюємо username і password без зайвих кліків
   await page.getByTestId('sign-in-username').fill('client_test');
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
 
-  // Click sign-in button and wait for navigation or expected element
+  // Натискаємо кнопку входу і очікуємо навігацію з повним завантаженням
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     page.getByTestId('sign-in-btn').click(),
   ]);
 
-  // Optionally, assert that user is logged in
-  // For example, check that a logout button or user profile element is visible
-  // await expect(page.getByTestId('user-profile')).toBeVisible();
+  // Перевірка, що користувач увійшов — наприклад, наявність ініціалів користувача 'CL'
+  const userInitials = page.getByText('CL').first();
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
 });

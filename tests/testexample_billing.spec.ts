@@ -7,15 +7,21 @@ test('billing', async ({ page }) => {
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
   await page.getByTestId('sign-in-btn').click();
 
-  // Wait for the 'Billing' link to appear as a sign of successful login
+  // Очікуємо, що з'явиться посилання 'Billing' після успішного логіну
   const billingLink = page.getByRole('link', { name: 'Billing' });
   await expect(billingLink).toBeVisible({ timeout: 10000 });
 
-  // Optionally, click the Billing link and wait for navigation
+  // Клікаємо на посилання 'Billing' і чекаємо повного завантаження сторінки
   await Promise.all([
-    page.waitForNavigation(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
     billingLink.click()
   ]);
 
-  // You could add further assertions here, e.g., check URL or page content
+  // Перевірка, що URL містить '/billing' або подібне (заміни на актуальний шлях)
+  await expect(page).toHaveURL(/billing/);
+
+  // Можна додати перевірку конкретного елемента на сторінці Billing, щоб переконатися, що сторінка завантажилась
+  // Наприклад, перевірка заголовку
+  const billingHeader = page.getByRole('heading', { name: /Billing/i });
+  await expect(billingHeader).toBeVisible();
 });
