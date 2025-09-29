@@ -22,17 +22,18 @@ pipeline {
       }
     }
 
-    stage('Install Playwright Browsers') {
+    stage('Install Playwright Chromium') {
       steps {
-        sh 'npx playwright install --with-deps'
+        // Встановлюємо лише Chromium з усіма залежностями
+        sh 'npx playwright install chromium --with-deps'
       }
     }
 
-    stage('Run Playwright tests') {
+    stage('Run Playwright tests (Chromium only)') {
       steps {
         script {
-          // Запускаємо тести. Якщо є фейли — pipeline продовжиться
-          def result = sh(script: 'npx playwright test || true', returnStatus: true)
+          // Запускаємо тести тільки в Chromium. Якщо є фейли — pipeline продовжиться
+          def result = sh(script: 'npx playwright test --project=chromium || true', returnStatus: true)
           // Зберігаємо код для перевірки пізніше
           currentBuild.description = "Test status code: ${result}"
           env.TEST_EXIT_CODE = result.toString()

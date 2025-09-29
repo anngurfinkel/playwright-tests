@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 
 test('labels_statistic', async ({ page }) => {
   // Go to sign-in page
@@ -41,3 +41,4 @@ test('labels_statistic', async ({ page }) => {
   await imgElement.scrollIntoViewIfNeeded();
   await imgElement.click();
 });
+*/

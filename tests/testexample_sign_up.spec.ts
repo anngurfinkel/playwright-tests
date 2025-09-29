@@ -12,12 +12,12 @@ test('sign_up', async ({ page }) => {
   // Натискаємо кнопку Sign up та чекаємо навігації (повного завантаження)
   await Promise.all([
     page.waitForNavigation({ waitUntil: 'networkidle' }),
-    page.getByRole('button', { name: 'Sign up' }).click(),
+    page.locator('button[form="signup-form"]').click(),
   ]);
 
-  // Перевірка, що після реєстрації URL містить dashboard, welcome або success
-  await expect(page).toHaveURL(/dashboard|welcome|success/i, { timeout: 10000 });
+  // Очікуємо, що після реєстрації URL перейде на сторінку підтвердження email
+  await expect(page).toHaveURL(/confirm-email/i, { timeout: 10000 });
 
-  // Якщо є повідомлення про успішну реєстрацію, можна додати перевірку
-  // await expect(page.getByText(/welcome|thank you for registering/i)).toBeVisible();
+  // Перевірка, що на сторінці є заголовок "Confirm your email"
+  await expect(page.getByRole('heading', { name: /confirm your email/i })).toBeVisible();
 });

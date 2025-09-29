@@ -7,8 +7,8 @@ test('api_keys', async ({ page }) => {
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
   await page.getByTestId('sign-in-btn').click();
 
-  // Чекаємо, поки з'являться ініціали користувача (можливо, треба почекати довше)
-  const userInitials = page.getByText('CL');
+  // Чекаємо, поки з'являться унікальні ініціали користувача — обираємо перший елемент з текстом 'CL'
+  const userInitials = page.getByText('CL').first();
   await expect(userInitials).toBeVisible({ timeout: 10000 });
   await userInitials.click();
 
@@ -21,7 +21,7 @@ test('api_keys', async ({ page }) => {
     orgManagementLink.click()
   ]);
 
-  // Перевіряємо, що ми на правильній сторінці (наприклад, URL містить /organization)
+  // Перевіряємо, що ми на правильній сторінці (URL містить /organization)
   await expect(page).toHaveURL(/organization/);
 
   // Клікаємо на вкладку API
@@ -29,7 +29,6 @@ test('api_keys', async ({ page }) => {
   await expect(apiTab).toBeVisible();
   await apiTab.click();
 
-  // Перевіряємо, що вкладка активна
-  // Можливо, клас не просто 'active', а інший, треба перевірити в devtools
+  // Перевіряємо, що вкладка активна (перевірка класів, які можуть позначати активний стан)
   await expect(apiTab).toHaveClass(/active|is-active|selected/);
 });

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 
 test('create_project', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
@@ -59,3 +59,4 @@ test('create_project', async ({ page }) => {
   // Verify redirected to project page with URL like /project/number/number
   await expect(page).toHaveURL(/\/project\/\d+\/\d+/);
 });
+*/

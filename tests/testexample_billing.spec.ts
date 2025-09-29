@@ -20,8 +20,7 @@ test('billing', async ({ page }) => {
   // Перевірка, що URL містить '/billing' або подібне (заміни на актуальний шлях)
   await expect(page).toHaveURL(/billing/);
 
-  // Можна додати перевірку конкретного елемента на сторінці Billing, щоб переконатися, що сторінка завантажилась
-  // Наприклад, перевірка заголовку
-  const billingHeader = page.getByRole('heading', { name: /Billing/i });
+  // Перевірка заголовку з унікальним рівнем і точним текстом
+  const billingHeader = page.getByRole('heading', { name: 'Billing & payments', level: 1 });
   await expect(billingHeader).toBeVisible();
 });

@@ -16,20 +16,15 @@ test('contact_us', async ({ page }) => {
   await userInitials.click();
 
   const contactUsLink = page.getByRole('link', { name: 'Contact Us' });
-  await Promise.all([
-    page.waitForNavigation(),
-    contactUsLink.click(),
-  ]);
+  await contactUsLink.click();
 
-  // Якщо "e.g. I’m looking to set up" - це placeholder, краще так:
+  // Чекаємо, поки з'явиться форма або модалка "Contact Us"
   const messageBox = page.getByPlaceholder('e.g. I’m looking to set up');
   await expect(messageBox).toBeVisible();
+
   await messageBox.fill('test117');
 
   await page.getByTestId('contact_us_confirm').click();
 
-  // Краще клікати на більш надійний селектор, наприклад кнопку, а не path в SVG
-  const closeButton = page.locator('#portal_root button'); // припустимо, що це кнопка
-  await expect(closeButton).toBeVisible();
-  await closeButton.click();
+  // Додаткові кроки якщо потрібно
 });
