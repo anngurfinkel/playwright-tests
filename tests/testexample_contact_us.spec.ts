@@ -22,7 +22,7 @@ test('contact_us', async ({ page }) => {
   const messageBox = page.getByPlaceholder('e.g. I’m looking to set up');
   await expect(messageBox).toBeVisible();
 
-  await messageBox.fill('test117');
+  await messageBox.fill('test118');
 
   await page.getByTestId('contact_us_confirm').click();
 
