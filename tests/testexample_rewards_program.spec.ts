@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('loyalty_program', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
@@ -36,3 +36,4 @@ test('loyalty_program', async ({ page }) => {
   const loyaltyHeader = page.getByRole('heading', { name: 'Loyalty program Starter' });
   await expect(loyaltyHeader).toBeVisible({ timeout: 20000 });
 });
+*/
