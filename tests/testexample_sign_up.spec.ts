@@ -1,4 +1,4 @@
-/*import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test('sign_up', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-up/');
@@ -20,5 +20,5 @@ test('sign_up', async ({ page }) => {
 
   // Перевірка, що на сторінці є заголовок "Confirm your email"
   await expect(page.getByRole('heading', { name: /confirm your email/i })).toBeVisible();
+  
 });
-*/
