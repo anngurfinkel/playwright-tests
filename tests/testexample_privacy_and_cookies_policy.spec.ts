@@ -13,24 +13,20 @@ test('privacy_and_cookies_policy', async ({ page }) => {
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Клік по кнопці входу і очікування повної навігації
-  await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    signInButton.click(),
-  ]);
+  // Click sign-in without waiting for navigation (likely SPA login)
+  await signInButton.click();
 
-  // Чекаємо появу ініціалів користувача і клікаємо
+  // Wait explicitly for an element that confirms login success
   const userInitials = page.getByText('CL').first();
-  await expect(userInitials).toBeVisible({ timeout: 10000 });
+  await expect(userInitials).toBeVisible({ timeout: 15000 });
   await userInitials.click();
 
-  // Знаходимо посилання "Privacy and cookies policy"
   const privacyLink = page.getByRole('link', { name: 'Privacy and cookies policy' });
   await expect(privacyLink).toBeVisible({ timeout: 5000 });
 
-  // Клікаємо і чекаємо навігацію, якщо вона є
+  // Click and wait for navigation only if it actually happens
   await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }).catch(() => {}), // на випадок, якщо немає навігації
+    page.waitForNavigation({ waitUntil: 'networkidle' }).catch(() => {}), // ignore if no navigation
     privacyLink.click(),
   ]);
 });

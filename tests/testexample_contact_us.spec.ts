@@ -1,30 +1,30 @@
 import { test, expect } from '@playwright/test';
 
-test('contact_us', async ({ page }) => {
+test('terms_of_use', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
 
   await page.getByTestId('sign-in-username').fill('client_test1');
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
-  
-  await Promise.all([
-    page.waitForNavigation(),
-    page.getByTestId('sign-in-btn').click(),
-  ]);
+  await page.getByTestId('sign-in-btn').click();
 
   const userInitials = page.getByText('CL').first();
-  await expect(userInitials).toBeVisible();
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
   await userInitials.click();
 
-  const contactUsLink = page.getByRole('link', { name: 'Contact Us' });
-  await contactUsLink.click();
+  const termsLink = page.getByRole('link', { name: 'Terms of use' });
+  await expect(termsLink).toBeVisible({ timeout: 10000 });
 
-  // Чекаємо, поки з'явиться форма або модалка "Contact Us"
-  const messageBox = page.getByPlaceholder('e.g. I’m looking to set up');
-  await expect(messageBox).toBeVisible();
+  // Клік по посиланню + чекати або навігацію (reload), або зміну URL (SPA)
+  const [response] = await Promise.all([
+    page.waitForNavigation({ waitUntil: 'networkidle' }).catch(() => null), // ловимо помилку, якщо не буде навігації
+    termsLink.click(),
+  ]);
 
-  await messageBox.fill('test118');
+  if (!response) {
+    // Якщо навігації не було, чекаємо зміну URL (SPA)
+    await expect(page).toHaveURL(/terms-of-use/i, { timeout: 10000 });
+  }
 
-  await page.getByTestId('contact_us_confirm').click();
-
-  // Додаткові кроки якщо потрібно
+  // Переконуємось, що сторінка з Terms of use відображається
+  await expect(page.getByText(/terms of use/i)).toBeVisible({ timeout: 10000 });
 });

@@ -1,0 +1,333 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]: CL
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: CL
+            - generic [ref=e51]:
+              - text: client_test1
+              - generic [ref=e52]: hurfinkelannaqa@gmail.com
+          - generic [ref=e54]: Organization
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e58] [cursor=pointer]:
+              - generic [ref=e59] [cursor=pointer]: P
+              - generic [ref=e60] [cursor=pointer]: personal_clie...
+              - generic [ref=e62] [cursor=pointer]: Owner
+            - img [ref=e63] [cursor=pointer]
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - paragraph [ref=e67]: Available balance
+              - generic [ref=e68]: $0.00
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Involved balance
+              - generic [ref=e71]: $0.00
+            - button "Top up the balance" [ref=e72] [cursor=pointer]:
+              - link "Top up the balance" [ref=e73] [cursor=pointer]:
+                - /url: /billing
+          - link "Organization management" [ref=e75] [cursor=pointer]:
+            - /url: /organization/members
+            - img [ref=e76] [cursor=pointer]
+            - text: Organization management
+          - link "Loyalty program Starter" [ref=e78] [cursor=pointer]:
+            - /url: /organization/rewards-program
+            - img [ref=e79] [cursor=pointer]
+            - text: Loyalty program
+            - generic [ref=e82] [cursor=pointer]: Starter
+          - link "Contact Us" [ref=e83] [cursor=pointer]:
+            - /url: /
+            - img [ref=e84] [cursor=pointer]
+            - text: Contact Us
+          - link "Logout" [ref=e86] [cursor=pointer]:
+            - /url: /
+            - img [ref=e87] [cursor=pointer]
+            - text: Logout
+          - generic [ref=e90]:
+            - text: Our
+            - link "Terms of use" [active] [ref=e91] [cursor=pointer]:
+              - /url: /terms-of-use
+            - text: and
+            - link "Privacy and cookies policy" [ref=e92] [cursor=pointer]:
+              - /url: /privacy-policy
+  - main [ref=e93]:
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - heading "TABLE OF CONTENT" [level=2] [ref=e96]
+        - list [ref=e97]:
+          - listitem [ref=e98]:
+            - link "1. Services" [ref=e99] [cursor=pointer]:
+              - /url: "#service"
+          - listitem [ref=e100]:
+            - link "2. Client account" [ref=e101] [cursor=pointer]:
+              - /url: "#client_account"
+          - listitem [ref=e102]:
+            - link "3. Data protection" [ref=e103] [cursor=pointer]:
+              - /url: "#data_protection"
+          - listitem [ref=e104]:
+            - link "4. Pricing and payment" [ref=e105] [cursor=pointer]:
+              - /url: "#pricing"
+          - listitem [ref=e106]:
+            - link "5. Trade Control Compliance" [ref=e107] [cursor=pointer]:
+              - /url: "#trade"
+          - listitem [ref=e108]:
+            - link "6. Privacy" [ref=e109] [cursor=pointer]:
+              - /url: "#privacy"
+          - listitem [ref=e110]:
+            - link "7. Intellectual Property Rights" [ref=e111] [cursor=pointer]:
+              - /url: "#ipr"
+          - listitem [ref=e112]:
+            - link "8. Feedback" [ref=e113] [cursor=pointer]:
+              - /url: "#feedback"
+          - listitem [ref=e114]:
+            - link "9. Third-Party Sites, Products and Services" [ref=e115] [cursor=pointer]:
+              - /url: "#THIRD_PARTY"
+          - listitem [ref=e116]:
+            - link "10. Disclaimers; No Warranty" [ref=e117] [cursor=pointer]:
+              - /url: "#DISCLAIMERS"
+          - listitem [ref=e118]:
+            - link "11. Indemnification" [ref=e119] [cursor=pointer]:
+              - /url: "#INDEMNIFICATION"
+          - listitem [ref=e120]:
+            - link "12. Limitation of Liability" [ref=e121] [cursor=pointer]:
+              - /url: "#LOL"
+          - listitem [ref=e122]:
+            - link "13. Termination of These Terms" [ref=e123] [cursor=pointer]:
+              - /url: "#TERMS"
+          - listitem [ref=e124]:
+            - link "14. Remedies" [ref=e125] [cursor=pointer]:
+              - /url: "#REMEDIES"
+          - listitem [ref=e126]:
+            - link "15. Governing Law and Jurisdiction" [ref=e127] [cursor=pointer]:
+              - /url: "#LAW"
+          - listitem [ref=e128]:
+            - link "16. General Provisions" [ref=e129] [cursor=pointer]:
+              - /url: "#GENERAL"
+      - generic [ref=e130]:
+        - heading "Terms of use" [level=2] [ref=e131]
+        - generic [ref=e132]:
+          - paragraph [ref=e133]:
+            - text: "Last update:"
+            - generic [ref=e134]: 07 October 2025
+          - paragraph [ref=e135]:
+            - text: These Terms of Use are a binding agreement between you
+            - generic [ref=e136]: (“Client”)
+            - text: and SupportYourApp, Inc. dba Label Your Data, a Delaware corporation and any of its affiliates
+            - generic [ref=e137]: (“LYD”)
+            - text: ", regarding Client access to and use of"
+            - generic [ref=e138]: platform.labelyourdata.com
+            - text: and any other associated web services or applications made generally available by LYD (collectively, the
+            - generic [ref=e139]: “Platform”
+            - text: ). LYD and its affiliates provide the Platform to the Client subject to this Agreement.
+          - paragraph [ref=e140]:
+            - text: The LYD Services are offered to the Client subject to the Client acceptance, without modification of all of the terms and conditions contained herein and all other operating rules, policies (including, without limitation, our Privacy and Cookies Policy), and procedures that may be published from time to time on the Platform or made available to the Client on or through the LYD Services (collectively, the
+            - generic [ref=e141]: “Terms”
+            - text: ). If the Client is entering into these Terms on behalf of an entity, such as a Client employer or a company the Client works for, the Client represents that has the legal authority to bind that entity.
+          - paragraph [ref=e142]:
+            - strong [ref=e143]: PLEASE READ THESE TERMS CAREFULLY. BY REGISTERING FOR, ACCESSING, BROWSING, AND/OR OTHERWISE USING THE LYD SERVICES, THE CLIENT ACKNOWLEDGES THAT THE CLIENT HAS READ, UNDERSTOOD, AND AGREED TO BE BOUND BY THESE TERMS. IF THE CLIENT DOES NOT AGREE TO BE BOUND BY THESE TERMS, DOES NOT ACCESS, BROWSE OR OTHERWISE USE THE PLATFORM OR THE LYD SERVICES.
+          - paragraph [ref=e144]: LYD may, in its sole discretion, elect to suspend or terminate access to, or use of the LYD Services to anyone who violates these Terms.
+          - paragraph [ref=e145]: In the event of any inconsistency or conflict between these Terms and the terms of any agreement, service order or statement of work, the terms of the agreement, service order or statement of work shall prevail.
+          - paragraph [ref=e146]: The original language of these Terms is English. LYD may make available translations of these Terms in other languages for convenience. In case of conflicts between the original English version and any translation, the English version shall prevail.
+        - generic [ref=e147]:
+          - heading "1. Services" [level=3] [ref=e148]
+          - paragraph [ref=e149]:
+            - generic [ref=e150]: Description.
+            - text: LYD offers a Platform through which the Client can submit tasks and projects
+            - generic [ref=e151]: ("Projects")
+            - text: requiring labeling and annotation services
+            - generic [ref=e152]: ("Services")
+            - text: and receive the corresponding results
+            - generic [ref=e153]: ("Deliverables")
+            - text: . The Services available on the Platform are provided by independent contractors
+            - generic [ref=e154]: ("Annotators")
+            - text: through another platform, Remoter.me, which is operated by LYD
+            - generic [ref=e155]: (“Remoter.me”)
+            - text: . LYD assumes sole responsibility for the quality and accuracy of the Services provided.
+          - paragraph [ref=e156]:
+            - generic [ref=e157]: Project Submission.
+            - text: "To submit the Project, the Client shall indicate:"
+          - list [ref=e158]:
+            - listitem [ref=e159]: "data description: upload and describe the data files to be annotated/labeled (e.g., images, text documents)."
+            - listitem [ref=e160]: "annotation requirements: clearly define the specific tasks Client requires Annotators to complete (e.g., bounding boxes for object detection, key points annotation, image segmentation)."
+            - listitem [ref=e161]: "instructions and examples: provide detailed instructions for Annotators, including specific labeling criteria, thorough description of each category/label and relevant examples to ensure consistency and high quality of the annotations."
+          - paragraph [ref=e162]:
+            - text: After the Project is created, LYD reviews the submitted details, including data samples, annotation requirements, and instructions, to ensure clarity, completeness, and feasibility of the Project scope. In the event of any inconsistency, LYD notifies the Client, who is then required to furnish the necessary details to address the identified discrepancies. The Client will receive an estimated turnaround time
+            - generic [ref=e163]: (“ETA”)
+            - text: for Project completion by LYD based on the specifics of the Project. LYD reserves the right to review and adjust the ETA after a thorough examination of Project requirements. The Client may access the Project on the Platform to monitor progress, review completed annotations, and communicate any questions or concerns through the Platform interface.
+          - paragraph [ref=e164]:
+            - generic [ref=e165]: Project Performance.
+            - text: Once Project details are finalized and Project data is anonymized, LYD uploads the Project to Remoter.me. Annotators access the Project, complete the Services according to the Client-provided instructions, and submit their Deliverables through the Remoter.me. Once the Deliverables are submitted by the Annotators, LYD provides it through the Platform to the Client as described herein. Client understands and agrees that Client does not have a direct contractual relationship with Annotators and all interactions regarding the Services occur solely through the Platform. Direct communication with Annotators is not permitted and may be deemed as a material breach of the Terms.
+          - paragraph [ref=e166]:
+            - generic [ref=e167]: Pilot.
+            - text: "LYD may initially conduct a pilot phase for each Project by the Client request at no additional cost. To request the pilot, the Client shall upload the limited amount of files to the Platform. This pilot phase may help to demonstrate the alignment with the Client`s requirements. Upon completion of the pilot, the Client provides approval confirming that the pilot meets the agreed-upon requirements. Only after receiving such approval Annotators proceed to the full-scale annotation of the Project. If any issues are identified during the pilot review, LYD will be required to correct the errors at no additional cost to the Client. The Client has the right to refuse this stage and proceed with the whole-scale Project by uploading the data files that need to be annotated/labeled."
+          - paragraph [ref=e168]:
+            - generic [ref=e169]: Approval Process.
+            - text: "Upon Project completion, LYD requests the Client's approval for the final Deliverables before debiting the agreed-upon Project fee from the Client's account balance. If the Client has concerns about the Deliverables, Client has the right to initiate a dispute within the Platform if the Client believes the Deliverables do not comply with provided specific instructions or established quality standards. Disputes must be submitted within ten (10) days of receiving the approval request from LYD. Dispute submissions should clearly outline the specific concerns and discrepancies identified in the Deliverables. LYD will facilitate the dispute resolution process by reviewing the Client's concerns and the Deliverables. Possible outcomes include:"
+          - list [ref=e170]:
+            - listitem [ref=e171]: If the identified errors are minor and can be rectified within the scope of the original project fee, LYD will be required to correct the errors at no additional cost to the Client provided that Client has the right to make a request for such correction solely one (1) time.
+            - listitem [ref=e172]: If the identified errors are significant and require substantial rework, Client shall initiate a new Project, if the new instructions are required, or create a new task within the Project. The fee shall be applicable as for the usual Project creation as specified in this Terms.
+          - paragraph [ref=e173]: Once the Client approves the Deliverables, the Project fee will be deducted from the account balance, and the Client will receive access to download the completed Project.
+          - paragraph [ref=e174]:
+            - generic [ref=e175]: Services Suspension.
+            - text: Client has the right to suspend a task within the Project using the designated button in the account before the Annotators begin work on the corresponding task. The Client understands and agrees that the Services cannot be canceled or paused after Annotators accept a task on Remoter.me. The entire Project may be suspended only if the Annotators do not begin work on all tasks within the Project; otherwise, the Client may suspend only the tasks as specified above. In the case of partial Project completion, LYD shall provide the Client with the Deliverables for the completed task(-s). Refunds for these cases are not possible; however, the outstanding balance may be used by the Client for future cooperation.
+        - generic [ref=e176]:
+          - heading "2. Client account" [level=3] [ref=e177]
+          - paragraph [ref=e178]:
+            - generic [ref=e179]: Account Registration.
+            - text: In order to use the Platform, the Client shall register for and maintain an active user account. Client may only possess one Platform account and if it is suspended or terminated for any reason, Client may not create another one unless Client has explicit permission from LYD to do so. The Platform’s account registration requires Client to submit certain personal information, such as Client name, Client email, and Client password. Client agrees to maintain accurate, complete, and up-to-date information in the Platform. Client is responsible for all activity that occurs under Client account, and Client agrees to maintain the security and secrecy of Platform usernames and passwords at all times.
+          - paragraph [ref=e180]:
+            - generic [ref=e181]: User Designation.
+            - text: The Client may have only one account. If several persons need to use an account on behalf of the Client, Client must designate such persons as user, a natural person granted with the authorization to use the account on behalf of the Client (“User”). Each such User shall be subject to the restrictions set forth in these Terms. If the Client has designated Users and granted them authorization, such Users will be deemed to be authorized to act on behalf of Client when using the Account. LYD is not responsible for and shall have no liability for verifying the validity of authorization of any User. However, LYD may, in its discretion, request additional information or proof of the person’s credentials. If LYD is not certain if a User has been granted authorization, LYD may, in its sole discretion, prevent such User from accessing the LYD Services. A User may be associated with multiple Clients and accounts. Deleting a User from one Account will not remove the User from the Platform if he/she is connected to multiple Accounts. The Client and any User associated with an Account must provide LYD with true, accurate, current, and complete information about the Client, Users or account and keep it up to date.
+          - paragraph [ref=e182]:
+            - generic [ref=e183]: Account Suspension.
+            - text: LYD will automatically suspend an account that has been inactive for a period of eighteen (18) months. An inactive account is defined as one that has not logged in or performed any actions within the Service during that time frame. Client will receive a notification prior to Client account suspension. This notification will provide instructions on how to prevent suspension by simply logging into account.
+          - paragraph [ref=e184]:
+            - generic [ref=e185]: Platform Security.
+            - text: "The Client shall not violate Platform’s security or integrity or use Platform to violate the security or integrity of any network, computer, or communications system, software application, or network or computing device. Prohibited activities include, but are not limited to, the following:"
+          - list [ref=e186]:
+            - listitem [ref=e187]: working around any technical limitations within Platform that only allow to use Platform in certain ways;
+            - listitem [ref=e188]: using a VPN or other technologies to mislead Platform about location or identity;
+            - listitem [ref=e189]: inundating either Platform or other systems with communications or requests in a deliberate attempt to overload that system or otherwise disrupt its proper operation;
+            - listitem [ref=e190]: attempting to probe, scan, or test the vulnerability of Platform or to breach any security or authentication measures used by Platform;
+            - listitem [ref=e191]: monitoring, crawling, or scraping data or content in Platform;
+            - listitem [ref=e192]: monitoring data or traffic on Platform;
+            - listitem [ref=e193]: damaging, interfering with, intercepting, or expropriating any system, program, audit logs, or data via computer technology, including viruses, Trojan, worms, or other malware.
+          - paragraph [ref=e194]: If at any time Client becomes aware or has reason to believe that there has been any misuse, compromise, loss, unauthorized disclosure or acquisition of, or access to Platform, Client agrees to promptly notify LYD at security@labelyourdata.com.
+          - paragraph [ref=e195]:
+            - generic [ref=e196]: Prohibited Activities.
+            - text: "Client agrees not to use or encourage others to use any Platform for any illegal, harmful, or offensive use. Prohibited activities on the Platform include, but are not limited to, the following as determined by LYD in its sole discretion, whether or not such material may be protected by law:"
+          - list [ref=e197]:
+            - listitem [ref=e198]: impersonating another person, account or entity, including a representative of LYD;
+            - listitem [ref=e199]: participating in or encouraging activities that may be harmful to others, LYD’s operations, or LYD’s reputation;
+            - listitem [ref=e200]: copying and modifying LYD visual interfaces, graphics, design, systems, methods, information, computer code, software, services, “look and feel”, organization, compilation of the content, code, data, and all other elements of LYD (“LYD Materials”);
+            - listitem [ref=e201]: reverse engineering, disassembling, or decompiling Platform;
+            - listitem [ref=e202]: accessing Platform in order to build a competitive product or service or a product or service with similar features, functions or graphics and conducting any benchmarking or other competitive analysis.
+          - paragraph [ref=e203]: LYD may report any activity that is believed to be in violation of any law or regulation to law enforcement officials, regulatory bodies, or other appropriate third parties.
+        - generic [ref=e204]:
+          - heading "3. Data protection" [level=3] [ref=e205]
+          - paragraph [ref=e206]:
+            - generic [ref=e207]: Client Data.
+            - text: The Client retains full ownership of all data they upload or submit through the LYD Platform (collectively,
+            - generic [ref=e208]: "\"Client Data\""
+            - text: ). To provide the Services as outlined in these Terms of Use, the Client grants LYD a non-exclusive, limited license to access, store, transmit, process, and use Client Data. This permission is solely for the purpose of fulfilling the Client's Project requests and facilitating communication between the Client and Annotators. The Client is responsible for (i) the accuracy, completeness, and legality of all Client Data uploaded to the Platform; (ii) ensuring that any data uploaded does not contain personal or sensitive information. If personal or sensitive data is uploaded, the Client acknowledges and accepts associated risks.
+          - paragraph [ref=e209]:
+            - generic [ref=e210]: LYD Obligations.
+            - text: LYD will not share Client Data with any third party except for Annotators solely for the purpose of completing the Client's Project(s) and as specified in the Privacy and Cookies Policy. LYD implements commercially reasonable security measures to protect the confidentiality, integrity, and availability of Client Data. To ensure Client privacy, LYD anonymizes Client identifiable information before uploading it to the Remoter.me platform.
+          - paragraph [ref=e211]:
+            - generic [ref=e212]: Retention Period and Data Deletion.
+            - text: LYD will retain Client Data for a period consistent with its legal and regulatory obligations. LYD deletes data associated with completed Projects after one (1) month and data associated with Deliverables after one (1) year. Client has the right to request the deletion of the account, Client Data and Deliverables at any time. To initiate deletion, Client shall submit a support request through the support@labelyourdata.com. Upon receiving a Client request, LYD begins the deletion process of account, Client Data, Deliverables or all of the aforementioned. A deletion process may take up to seven (7) business days due to necessary data backups and security protocols.
+        - generic [ref=e213]:
+          - heading "4. Pricing and payment" [level=3] [ref=e214]
+          - paragraph [ref=e215]:
+            - generic [ref=e216]: Pricing.
+            - text: LYD provides an estimated pricing on the Platform that offers an approximate cost based on Project details entered by the Client. Final pricing may be subject to adjustment after review by LYD.
+          - paragraph [ref=e217]:
+            - generic [ref=e218]: Payment Process.
+            - text: "Clients are required to maintain a minimum balance in their account to initiate any Projects. Clients may choose between two payment methods:"
+          - list [ref=e219]:
+            - listitem [ref=e220]: "Project-based budgeting: allocate a specific amount for each Project. Once the allocated budget is used up, the Services will be paused, and the Client will receive an alert prompting them to add more funds to continue."
+            - listitem [ref=e221]: "Overall balance budgeting: deduct Project fees from the Client's overall account balance. Services will continue until the account balance reaches zero. When the balance is nearing depletion, the Client will receive an email notification to avoid Project interruptions."
+          - paragraph [ref=e222]:
+            - generic [ref=e223]: Taxes.
+            - text: Client is responsible for all taxes related to Client purchase of the Services, including duties, customs fees, and national, state, or local taxes (collectively,
+            - generic [ref=e224]: "\"Taxes\""
+            - text: ). LYD pricing does not include Taxes unless otherwise stated. If LYD becomes obligated to collect Taxes, it will be invoiced to the Client or collected at the time of purchase. LYD may determine if Taxes apply to Client purchase and collect and remit them to the appropriate authorities. Client must promptly provide valid tax documentation if Client believes Taxes do not apply or if amounts must be withheld. Client is solely responsible for any misrepresentations or non-compliance regarding Taxes, including associated penalties and fines.
+          - paragraph [ref=e225]:
+            - generic [ref=e226]: Direct Debit Payments.
+            - text: LYD may request that the Client complete a direct debit mandate to enable direct debit payments. In such cases LYD shall comply with all applicable national rules and regulations related to direct debit payments. LYD uses Stripe to process Client direct debit payments with applicable commission outlined in the terms that shall be paid by the Client. More information on how Stripe processes Client’s personal data and Client’s data protection rights, including Client’s right to object, is available at
+            - link "https://stripe.com." [ref=e227] [cursor=pointer]:
+              - /url: https://stripe.com.
+        - generic [ref=e228]:
+          - heading "5. Trade Control Compliance" [level=3] [ref=e229]
+          - paragraph [ref=e230]: Client represents and warrants on an ongoing basis, that (i) it or its directors, director nominees, officers, or employees, or any agent, affiliate or other person acting on behalf of the Party, is not currently the subject or the target of any U.S. sanctions administered by the Office of Foreign Assets Control of the U.S. Department of the Treasury or the U.S. Department of State, the United Nations Security Council, the European Union, or other relevant sanctions authority (collectively, “Sanctions”); and (ii) Client is not located, organized or resident in a country or territory that is the subject or target of Sanctions, including, without limitation, Crimea, Cuba, Iran, North Korea, Syria, Russian Federation and Belarus, Ukrainian territory occupied by Russian Federation. Since its inception, Client has not knowingly engaged in and is not now knowingly engaged in any dealings or transactions with any person that at the time of the dealing or transaction is or was the subject or the target of Sanctions or with any sanctioned country. Client shall promptly inform LYD if any of foregoing representations and warranties regarding the Sanctions are no longer true.
+        - generic [ref=e231]:
+          - heading "6. Privacy" [level=3] [ref=e232]
+          - paragraph [ref=e233]: LYD is deeply committed to protecting the privacy of its Clients and Users. LYD’s Privacy and Cookies Policy is hereby incorporated into these Terms by reference. Please read the Privacy and Cookies Policy carefully as it governs LYD’s collection, use, and disclosure of Client’s or User’s personal information.
+        - generic [ref=e234]:
+          - heading "7. Intellectual Property Rights" [level=3] [ref=e235]
+          - paragraph [ref=e236]:
+            - text: The LYD Services, trade names and trademarks, and any parts or elements thereof are solely and exclusively owned and operated by LYD and its third party vendors and hosting partners. Any visual interfaces, graphics, design, systems, methods, information, computer code, software, services, “look and feel”, organization, compilation of the content, code, data, and all other elements of LYD
+            - generic [ref=e237]: (“LYD Materials”)
+            - text: are protected by copyright, trade dress, patent, trade secrets, and trademark laws, international conventions and treaties, and all other relevant intellectual property and proprietary rights laws. LYD, its affiliates and licensors retains all right, title and interest in such LYD Services, LYD Materials, LYD trade names and trademarks, and any parts or elements. The Client use of the LYD Services and LYD Materials, and any parts or elements does not grant to the Client any ownership right or intellectual property rights therein. Any commercial or promotional distribution, publishing or exploitation of the LYD Materials is strictly prohibited unless the Client has received the express prior written permission from LYD or the otherwise applicable rights holder. LYD reserves all rights to the LYD Services, LYD Materials and LYD trade names and trademarks not expressly granted in the Terms.
+        - generic [ref=e238]:
+          - heading "8. Feedback" [level=3] [ref=e239]
+          - paragraph [ref=e240]:
+            - text: If the Client or the User provides LYDs with any comments, bug reports, feedback, or modifications for the LYD Services
+            - generic [ref=e241]: (“Feedback”)
+            - text: ", LYD shall have the right to use such Feedback at its discretion, including, but not limited to the incorporation of such suggested changes into the LYD Services."
+          - paragraph [ref=e242]: The Client or the User (as applicable) hereby grants LYD a perpetual, irrevocable, nonexclusive, royalty free license under all rights necessary to incorporate, publish, reproduce, distribute, modify, adapt, prepare derivative works of, publicly display, publicly perform, exploit and use Client’s Feedback for any purpose. LYD shall have the right to modify or remove any Feedback provided in the public areas of the Platform if LYD deems, at its discretion, harmful, offensive, threatening, abusive, harassing, tortuous, defamatory, vulgar, obscene, invasive of another’s privacy, hateful or otherwise unlawful.
+        - generic [ref=e243]:
+          - heading "9. Third-Party Sites, Products and Services" [level=3] [ref=e244]
+          - paragraph [ref=e245]: The LYD Services may include links to other websites or services (“Linked Sites”) solely as a convenience to Clients. Unless otherwise specifically and explicitly indicated herein, LYD does not endorse any such Linked Sites or the information, material, products, or services contained on or accessible through Linked Sites. Furthermore, LYD makes no express or implied warranties with regard to the information, material, products, or services that are contained on or accessible through Linked Sites. ACCESS AND USE OF LINKED SITES, INCLUDING THE INFORMATION, MATERIAL, PRODUCTS, AND SERVICES ON LINKED SITES OR AVAILABLE THROUGH LINKED SITES, IS SOLELY AT THE CLIENT OWN RISK.
+        - generic [ref=e246]:
+          - heading "10. Disclaimers; No Warranty" [level=3] [ref=e247]
+          - paragraph [ref=e248]: UNLESS OTHERWISE EXPRESSLY STATED BY LYD, THE LYD SERVICES, LYD MATERIAL, AND ANY CONTENT, SERVICES, THIRD PARTY SERVICES OR FEATURES MADE AVAILABLE IN CONJUNCTION WITH OR THROUGH THE LYD SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, LYD AND ITS AFFILIATES DISCLAIM ALL WARRANTIES, STATUTORY, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OF PROPRIETARY RIGHTS, CORRECTNESS, ACCURACY, AND RELIABILITY.
+          - paragraph [ref=e249]: UNLESS OTHERWISE EXPRESSLY STATED BY LYD, LYD AND ITS AFFILIATES DO NOT WARRANT THAT THE LYD SERVICES AND ANY CONTENT, OR FEATURES MADE AVAILABLE IN CONJUNCTION WITH OR THROUGH THE LYD SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE LYD SERVICES AND ANY CONTENT, OR FEATURES MADE AVAILABLE IN CONJUNCTION WITH OR THROUGH THE LYD SERVICES OR THE SERVER THAT MAKES THEM AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+          - paragraph [ref=e250]: THE LAWS OF CERTAIN COUNTRIES AND STATES DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO THE CLIENT, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY, AND THE CLIENT MIGHT HAVE ADDITIONAL RIGHTS.
+        - generic [ref=e251]:
+          - heading "11. Indemnification" [level=3] [ref=e252]
+          - paragraph [ref=e253]: The Client agrees to defend, indemnify and hold harmless LYD and its affiliates, and their respective directors, officers, employees and agents, from any claims, losses, damages, liabilities, including attorney’s fees, arising out of the Client use or misuse of the LYD Services, LYD Materials, representations made to the LYD, its affiliates and/or third parties, violation of these Terms, violation of the rights of any other person or entity, or any breach of the foregoing representations, warranties, and covenants. LYD reserves the right, at its own expense, to assume the exclusive defense and control of any matter for which the Client is required to indemnify LYD, and the Client agrees to cooperate with such defense of these claims.
+        - generic [ref=e254]:
+          - heading "12. Limitation of Liability" [level=3] [ref=e255]
+          - paragraph [ref=e256]: IN NO EVENT WILL LYD BE LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES, ARISING UNDER OR RELATING TO THIS AGREEMENT OR FROM THE USE OF, OR INABILITY TO USE, THE SERVICE. LYD’S LIABILITY PURSUANT TO THIS TERMS SHALL NOT EXCEED IN AGGREGATE THE AMOUNTS PAID AND/OR TO BE PAID BY THE CLIENT TO THE LYD WITHIN THE 12 MONTHS PRIOR TO THE EVENT WHICH RAISES THE LIABILITY.
+        - generic [ref=e257]:
+          - heading "13. Termination of These Terms" [level=3] [ref=e258]
+          - paragraph [ref=e259]: These Terms may be terminated for convenience in the following situations;
+          - list [ref=e260]:
+            - listitem [ref=e261]: by LYD upon decision to end provision of the LYD Services and close the Platform; or
+            - listitem [ref=e262]: immediately by either party, if proceedings are initiated for the other party’s liquidation or insolvency or a negotiated settlement with the other party’s creditors is concluded or an assignment is made on behalf of the other party for the benefit of creditors.
+          - paragraph [ref=e263]: "These Terms may be terminated for default upon written notice to the other party as indicated in the “Notice” Section below:"
+          - list [ref=e264]:
+            - listitem [ref=e265]: by either party in case of breach of these Terms by the other party, if the breach has not been cured within 10 days of receipt of a notice from the non-breaching party; or
+            - listitem [ref=e266]: immediately by either party if the other party breaches its obligations, as applicable under Trade Control Compliance, Intellectual Property Rights, Indemnification of these Terms.
+          - paragraph [ref=e267]: Upon termination of these Terms,
+          - list [ref=e268]:
+            - listitem [ref=e269]: LYD shall deactivate and permanently delete the Client’s account, within 30 calendar days of the effective date of the termination of these Terms. If the Client has specifically requested for an earlier deletion of the Account, LYD shall fulfill such request within 7 calendar days of its receipt of such request.
+            - listitem [ref=e270]: LYD shall provide the Client with the partially completed Deliverables. The fee for the Services is non-refundable; however, the Client has the right to apply it to a future Project.
+            - listitem [ref=e271]: "the Client must:"
+            - list [ref=e272]:
+              - listitem [ref=e273]: stop using and prevent the further usage of the LYD Services, including, without limitation, the Platform;
+              - listitem [ref=e274]: If applicable, pay any amounts owed to LYD under these Terms; and
+              - listitem [ref=e275]: discharge any liability incurred by the Client before under these Terms prior to their termination.
+        - generic [ref=e276]:
+          - heading "14. Remedies" [level=3] [ref=e277]
+          - paragraph [ref=e278]: If LYD terminates these Terms as a result of an uncured breach by the Client or User, LYD is entitled to use the same or similar remedies against any other persons who use the LYD Services in conflict with these Terms. Notwithstanding the foregoing, LYD may also apply any other remedies available to it under the applicable law. Upon application of any remedies, the Client or User may lose access or suffer a loss of certain features, functions, parts or elements of the LYD Services.
+          - paragraph [ref=e279]: If LYD has reasonable grounds to believe that the Client’s or User’s use of the LYD Services, including the Account may harm any third persons, LYD has the right to take adequate measures under its control to prevent, stop and eliminate the harm, where possible, in order to protect those third persons.
+        - generic [ref=e280]:
+          - heading "15. Governing Law and Jurisdiction" [level=3] [ref=e281]
+          - paragraph [ref=e282]: These Terms shall be governed by the laws of England and Wales without reference to the principles of conflicts of law. Any litigation related to these Terms will be brought in the courts located in the country (state) of the principal place of business of the defending party. Nothing in this clause limits the right of plaintiff party to bring proceedings, including third party proceedings, against defending party in any other court of competent jurisdiction, and the bringing or continuing of proceedings in any one or more jurisdictions shall not preclude the bringing of proceedings in any other jurisdiction, whether concurrently or not, if and to the extent permitted by applicable law.
+          - paragraph [ref=e283]: Notwithstanding anything contained in these Terms to the contrary, the parties shall attempt in good faith to resolve any dispute, controversy or claim arising out of or in connection with this Terms promptly by negotiations between senior executives of the parties who have authority to settle the controversy (but who do not have direct responsibility for the administration of these Terms). The disputing party shall give the other party written notice of the dispute, controversy or claim. Any notice must contain a description of the dispute, controversy or claim and the nature and amount of loss (to the extent that the nature and amount of such losses are known at such time). The disputing party will furnish promptly to the other party copies of documents supporting such dispute, controversy or claim.
+        - generic [ref=e284]:
+          - heading "16. General Provisions" [level=3] [ref=e285]
+          - heading "Relationship of the Parties" [level=4] [ref=e286]
+          - paragraph [ref=e287]: The parties will act solely as independent contractors. These Terms shall not be construed as creating an agency, partnership, joint venture, fiduciary duty, or any other form of legal association between the Client and either LYD, and the Client shall not represent to the contrary, whether expressly, by implication, appearance or otherwise. These Terms are not for the benefit of any third parties.
+          - heading "Severability" [level=4] [ref=e288]
+          - paragraph [ref=e289]: If any term, condition or provision of these Terms is held to be invalid, unenforceable or illegal in whole or in part for any reason, that provision shall be enforced to the maximum extent permissible so as to affect the intent of the parties. The validity and enforceability of the remaining terms, conditions or provisions, or portions of them, shall not be affected.
+          - heading "Entire Agreement" [level=4] [ref=e290]
+          - paragraph [ref=e291]: These Terms are the entire agreement between the Client and LYD regarding the Client’s use of the LYD Services and supersedes all prior and contemporaneous agreements, proposals or representations, written or oral, concerning its subject matter. Except as otherwise provided herein, no modification, amendment, or waiver of any provision of these Terms will be effective unless in writing and signed by the party against whom the modification, amendment or waiver is to be asserted.
+          - heading "Assignment" [level=4] [ref=e292]
+          - paragraph [ref=e293]: "The Client may not, directly or indirectly, in whole or in part, by operation of law or otherwise, assign or transfer these Terms or delegate any of its rights and/or obligations under these Terms without LYD’s prior written consent. Any attempted assignment, transfer or delegation without such prior written consent will be void and unenforceable. Notwithstanding the foregoing, the Client, or its permitted successive assignees or transferees, may assign or transfer these Terms or delegate any rights or obligations hereunder without LYD consent: (1) to any entity controlled by, or under common control with the Client, or its permitted successive assignees or transferees; or (2) in connection with a merger, reorganization, transfer, sale of assets or product lines, or change of control or ownership of the Client, or its permitted successive assignees or transferees."
+          - heading "No Waiver" [level=4] [ref=e294]
+          - paragraph [ref=e295]: Failure of either party to exercise or enforce any provision of or any of its rights under these Terms shall not be deemed a waiver of future enforcement of that or any other provision or right.
+          - heading "Notices" [level=4] [ref=e296]
+          - paragraph [ref=e297]: Except as otherwise specified in these Terms, all notices related to these Terms will be in writing and will be effective upon (a) personal delivery, (b) the second business day after mailing be e-mail, or (c), except for notices of termination or an indemnifiable claim (“Legal Notices”), which shall clearly be identifiable as Legal Notices, the day of sending by email. Billing-related notices to the Client will be addressed to the relevant billing contact designated by the Client. Remoter.me will send notices to Client at the e-mail address maintained in LYD’ records. The Client may send notices to LYD in the build-in chat on the Platform.
+```

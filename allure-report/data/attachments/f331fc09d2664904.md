@@ -1,0 +1,104 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [active] [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e47] [cursor=pointer]: CL
+  - main [ref=e48]:
+    - generic [ref=e49]:
+      - heading "Billing & payments" [level=1] [ref=e50]
+      - generic [ref=e51]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - paragraph [ref=e57]: Available balance
+              - generic [ref=e58]: $0.00
+            - generic [ref=e59]:
+              - paragraph [ref=e60]: Involved balance
+              - generic [ref=e61]: $0.00
+          - generic [ref=e62]:
+            - text: Payment amount
+            - img [ref=e64]
+          - generic [ref=e67]:
+            - generic [ref=e68]: $
+            - spinbutton [ref=e69]: "100"
+            - button "Top up the balance" [ref=e70] [cursor=pointer]
+        - generic [ref=e71]:
+          - heading "Billing personal data" [level=3] [ref=e72]
+          - generic [ref=e74]:
+            - img [ref=e76]
+            - generic [ref=e80]: Please fill the personal data fields for balance top up.
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - generic [ref=e84]: Full name
+                - textbox "Full name" [ref=e85]
+              - generic [ref=e86]:
+                - generic [ref=e87]: Company name
+                - textbox "Company name" [ref=e88]
+              - generic [ref=e89]:
+                - generic [ref=e90]: Country
+                - generic [ref=e91]:
+                  - log [ref=e93]
+                  - generic [ref=e94]:
+                    - generic [ref=e95]:
+                      - generic [ref=e96]: Select a country
+                      - combobox [ref=e98]
+                    - img [ref=e102]
+            - generic [ref=e104]:
+              - generic [ref=e105]:
+                - generic [ref=e106]: City
+                - textbox "City" [ref=e107]
+              - generic [ref=e108]:
+                - generic [ref=e109]: Street
+                - textbox "Street" [ref=e110]
+              - generic [ref=e111]:
+                - generic [ref=e112]: Postal code
+                - textbox "Postal code" [ref=e113]
+              - generic [ref=e114]:
+                - generic [ref=e115]: VAT ID
+                - textbox "VAT ID" [ref=e116]
+            - generic [ref=e117]:
+              - generic [ref=e118] [cursor=pointer]:
+                - img [ref=e120] [cursor=pointer]
+                - generic [ref=e122] [cursor=pointer]: Use by default
+              - img
+      - generic [ref=e125]:
+        - img [ref=e126]
+        - heading "Payment history" [level=2] [ref=e128]
+        - paragraph [ref=e129]: Your transactions receipts will appear here
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - img "+10% on Your First Deposit"
+          - heading "Welcome Boost!" [level=1] [ref=e132]:
+            - text: Welcome
+            - text: Boost!
+        - generic [ref=e133]:
+          - generic [ref=e134]: +10% on Your First Deposit 🎁
+          - paragraph [ref=e135]:
+            - text: Top up for the first time with
+            - generic [ref=e136]: $100 to $10,000
+            - text: — and we’ll boost your balance by
+            - generic [ref=e137]: 10%
+            - text: "! One-time only, make it count."
+          - button "Top up the balance" [ref=e138] [cursor=pointer]:
+            - link "Top up the balance" [ref=e139] [cursor=pointer]:
+              - /url: /billing
+```

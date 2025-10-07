@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.55.1",
-    "@types/node": "^22.14.0"
+    "@types/node": "^22.14.0",
+    "allure-playwright": "^3.4.1"
   },
   "dependencies": {
     "fsevents": "^2.3.2",

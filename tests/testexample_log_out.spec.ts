@@ -7,28 +7,30 @@ test('log_out', async ({ page }) => {
   const passwordInput = page.getByTestId('sign-in-password');
   const signInButton = page.getByTestId('sign-in-btn');
 
+  // Переконатися, що поля для введення видимі
   await expect(usernameInput).toBeVisible();
   await expect(passwordInput).toBeVisible();
 
+  // Ввести логін і пароль
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Click sign in and wait for navigation, чекати мережеву активність для надійності
+  // Натиснути кнопку "Sign In" і чекати завершення навігації
   await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
     signInButton.click(),
+    page.waitForNavigation({ waitUntil: 'networkidle' }),
   ]);
 
-  // Чекати, що ініціали користувача видимі і клікати
+  // Чекати, що ініціали користувача з'явились і клікаємо по них (щоб відкрити меню)
   const userInitials = page.getByText('CL').first();
   await expect(userInitials).toBeVisible({ timeout: 10000 });
   await userInitials.click();
 
-  // Чекати і клікати кнопку виходу
+  // Чекати, що кнопка "Logout" видима і клікаємо по ній
   const logoutButton = page.getByTestId('logout_btn');
   await expect(logoutButton).toBeVisible({ timeout: 5000 });
   await logoutButton.click();
 
-  // Почекати, що повернулися на сторінку логіну
+  // Почекати, що сторінка логіну знову відображається (впевнитись, що вийшли)
   await expect(signInButton).toBeVisible({ timeout: 10000 });
 });

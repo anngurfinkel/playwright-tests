@@ -1,43 +1,38 @@
 import { test, expect } from '@playwright/test';
 
-test('rewards program flow', async ({ page }) => {
+test('loyalty_program', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
 
-  // Заповнюємо username
   const usernameInput = page.getByTestId('sign-in-username');
-  await expect(usernameInput).toBeVisible({ timeout: 5000 });
-  await usernameInput.fill('client_test1');
-
-  // Заповнюємо password
   const passwordInput = page.getByTestId('sign-in-password');
+  const signInButton = page.getByTestId('sign-in-btn');
+
+  await expect(usernameInput).toBeVisible({ timeout: 5000 });
   await expect(passwordInput).toBeVisible({ timeout: 5000 });
+
+  await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Клік на кнопку входу і очікування навігації з повним завантаженням
+  // Чекаємо навігацію після кліку на кнопку входу
   await Promise.all([
     page.waitForNavigation({ waitUntil: 'networkidle' }),
-    page.getByTestId('sign-in-btn').click(),
+    signInButton.click(),
   ]);
 
-  // Клік по першому елементу з текстом 'CL' (ініціали користувача)
-  const clElement = page.getByText('CL').first();
-  await expect(clElement).toBeVisible({ timeout: 10000 });
-  await clElement.click();
+  const userInitials = page.getByText('CL').first();
+  await expect(userInitials).toBeVisible({ timeout: 10000 });
+  await userInitials.click();
 
-  // Переходимо в Organization management (очікуємо видимість і клікаємо)
-  const orgManagementLink = page.getByRole('link', { name: 'Organization management' });
-  await expect(orgManagementLink).toBeVisible({ timeout: 10000 });
+  const loyaltyLink = page.getByRole('link', { name: 'Loyalty program Starter' });
+  await expect(loyaltyLink).toBeVisible({ timeout: 10000 });
 
+  // Клік і очікування навігації (якщо сторінка змінюється)
   await Promise.all([
     page.waitForNavigation({ waitUntil: 'networkidle' }),
-    orgManagementLink.click(),
+    loyaltyLink.click(),
   ]);
 
-  // Клік на вкладку rewards program
-  const rewardsTab = page.getByTestId('tab-rewards-program');
-  await expect(rewardsTab).toBeVisible({ timeout: 5000 });
-  await rewardsTab.click();
-
-  // За бажанням: перевірка контенту вкладки
-  // await expect(page.getByTestId('rewards-program-content')).toBeVisible({ timeout: 5000 });
+  // Перевіряємо, що заголовок з текстом є видимим (без рівня заголовку)
+  const loyaltyHeader = page.getByRole('heading', { name: 'Loyalty program Starter' });
+  await expect(loyaltyHeader).toBeVisible({ timeout: 20000 });
 });

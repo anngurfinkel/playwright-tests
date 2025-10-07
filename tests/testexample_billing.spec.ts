@@ -7,20 +7,20 @@ test('billing', async ({ page }) => {
   await page.getByTestId('sign-in-password').fill('Fjik67%ips');
   await page.getByTestId('sign-in-btn').click();
 
-  // Очікуємо, що з'явиться посилання 'Billing' після успішного логіну
+  // Очікуємо появу посилання 'Billing' після логіну
   const billingLink = page.getByRole('link', { name: 'Billing' });
   await expect(billingLink).toBeVisible({ timeout: 10000 });
 
-  // Клікаємо на посилання 'Billing' і чекаємо повного завантаження сторінки
+  // Клікаємо і чекаємо, поки URL зміниться на потрібний (краще, ніж waitForNavigation)
   await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    billingLink.click()
+    billingLink.click(),
+    page.waitForURL('**/billing', { timeout: 30000 }),
   ]);
 
-  // Перевірка, що URL містить '/billing' або подібне (заміни на актуальний шлях)
+  // Перевірка URL
   await expect(page).toHaveURL(/billing/);
 
-  // Перевірка заголовку з унікальним рівнем і точним текстом
+  // Перевірка заголовку на сторінці billing
   const billingHeader = page.getByRole('heading', { name: 'Billing & payments', level: 1 });
   await expect(billingHeader).toBeVisible();
 });

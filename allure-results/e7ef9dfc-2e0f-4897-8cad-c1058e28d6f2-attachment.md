@@ -1,0 +1,67 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e47] [cursor=pointer]: CL
+  - main [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Organization management" [level=1] [ref=e51]
+        - heading "personal_client_test1" [level=2] [ref=e52]
+        - generic [ref=e54]: Starter
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: Members
+          - generic [ref=e59] [cursor=pointer]: API Keys
+          - generic [ref=e60] [cursor=pointer]: Cloud Storage
+          - generic [ref=e61] [cursor=pointer]: Rewards Program
+        - generic [ref=e63] [cursor=pointer]:
+          - generic [ref=e65] [cursor=pointer]:
+            - generic [ref=e66] [cursor=pointer]: P
+            - generic [ref=e67] [cursor=pointer]: personal_clie...
+            - generic [ref=e69] [cursor=pointer]: Owner
+          - img [ref=e70] [cursor=pointer]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - text: "Members:"
+            - generic [ref=e76]: "1"
+          - button "Invite new member" [ref=e77] [cursor=pointer]:
+            - img [ref=e78] [cursor=pointer]
+            - text: Invite new member
+        - table [ref=e81]:
+          - rowgroup [ref=e82]:
+            - row "User Role Key Remove member" [ref=e83]:
+              - cell "User" [ref=e84]
+              - cell "Role Key" [ref=e85]
+              - cell "Remove member" [ref=e86]
+          - rowgroup [ref=e87]:
+            - row "CL client_test1 hurfinkelannaqa@gmail.com Owner" [ref=e88]:
+              - cell "CL client_test1 hurfinkelannaqa@gmail.com" [ref=e89]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]: CL
+                  - generic [ref=e92]:
+                    - text: client_test1
+                    - generic [ref=e93]: hurfinkelannaqa@gmail.com
+              - cell "Owner" [ref=e94]:
+                - generic [ref=e95]: Owner
+              - cell [ref=e96]
+```

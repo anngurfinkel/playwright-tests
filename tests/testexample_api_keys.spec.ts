@@ -16,9 +16,10 @@ test('api_keys', async ({ page }) => {
   const orgManagementLink = page.getByRole('link', { name: 'Organization management' });
   await expect(orgManagementLink).toBeVisible({ timeout: 10000 });
 
+  // Клікаємо на посилання і чекаємо, що URL зміниться
   await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    orgManagementLink.click()
+    orgManagementLink.click(),
+    page.waitForURL('**/organization/members', { timeout: 30000 }),
   ]);
 
   // Перевіряємо, що ми на правильній сторінці (URL містить /organization)

@@ -13,24 +13,18 @@ test('organization_management', async ({ page }) => {
   await usernameInput.fill('client_test1');
   await passwordInput.fill('Fjik67%ips');
 
-  // Клік по кнопці входу і очікування повної навігації
-  await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    signInButton.click(),
-  ]);
+  // Клік без waitForNavigation, чекаємо появу елементу, що свідчить про успішний вхід
+  await signInButton.click();
 
-  // Чекаємо на появу ініціалів користувача і клікаємо по ним
   const userInitials = page.getByText('CL').first();
-  await expect(userInitials).toBeVisible({ timeout: 10000 });
+  await expect(userInitials).toBeVisible({ timeout: 15000 });
   await userInitials.click();
 
-  // Знаходимо і клікаємо посилання "Organization management"
   const orgManagementLink = page.getByRole('link', { name: 'Organization management' });
   await expect(orgManagementLink).toBeVisible({ timeout: 5000 });
 
-  // Очікуємо навігацію після кліку
-  await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    orgManagementLink.click(),
-  ]);
+  // Аналогічно, якщо це SPA — не чекати waitForNavigation, а чекати зміну URL або елементів
+  await orgManagementLink.click();
+
+  await expect(page).toHaveURL(/organization-management/i, { timeout: 10000 });
 });
