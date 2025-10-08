@@ -1,4 +1,4 @@
-/* import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 
 test('resend_email', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/confirm-email');

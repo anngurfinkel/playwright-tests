@@ -1,11 +1,11 @@
-/* import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test('reset_password', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/reset_password');
 
   const emailInput = page.getByTestId('sign-up-email');
   await expect(emailInput).toBeVisible();
-  await emailInput.fill('ahurfinkel@labelyourdata.com');
+  await emailInput.fill('hurfinkelannaqa@gmail.com');
 
   const resetButton = page.getByRole('button', { name: 'Reset Password' });
   await expect(resetButton).toBeVisible();
@@ -18,4 +18,3 @@ test('reset_password', async ({ page }) => {
   // Optionally, wait for sign-in page to appear or URL to change
   await expect(page).toHaveURL(/sign-in/);
 });
-*/

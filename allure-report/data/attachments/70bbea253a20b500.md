@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8] [cursor=pointer]
+        - generic [ref=e31]:
+          - link "Dashboard" [ref=e32] [cursor=pointer]:
+            - /url: /
+            - img [ref=e33] [cursor=pointer]
+            - text: Dashboard
+          - link "Calculator" [ref=e36] [cursor=pointer]:
+            - /url: /calculator
+            - img [ref=e37] [cursor=pointer]
+            - text: Calculator
+          - link "Billing" [ref=e42] [cursor=pointer]:
+            - /url: /billing
+            - img [ref=e43] [cursor=pointer]
+            - text: Billing
+        - generic [ref=e46]:
+          - generic [ref=e47] [cursor=pointer]: CL
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: CL
+              - generic [ref=e51]:
+                - text: client_test1
+                - generic [ref=e52]: hurfinkelannaqa@gmail.com
+            - generic [ref=e54]: Organization
+            - generic [ref=e56] [cursor=pointer]:
+              - generic [ref=e58] [cursor=pointer]:
+                - generic [ref=e59] [cursor=pointer]: P
+                - generic [ref=e60] [cursor=pointer]: personal_clie...
+                - generic [ref=e62] [cursor=pointer]: Owner
+              - img [ref=e63] [cursor=pointer]
+            - generic [ref=e65]:
+              - generic [ref=e66]:
+                - paragraph [ref=e67]: Available balance
+                - generic [ref=e68]: $0.00
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: Involved balance
+                - generic [ref=e71]: $0.00
+              - button "Top up the balance" [ref=e72] [cursor=pointer]:
+                - link "Top up the balance" [ref=e73] [cursor=pointer]:
+                  - /url: /billing
+            - link "Organization management" [ref=e75] [cursor=pointer]:
+              - /url: /organization/members
+              - img [ref=e76] [cursor=pointer]
+              - text: Organization management
+            - link "Loyalty program Starter" [ref=e78] [cursor=pointer]:
+              - /url: /organization/rewards-program
+              - img [ref=e79] [cursor=pointer]
+              - text: Loyalty program
+              - generic [ref=e82] [cursor=pointer]: Starter
+            - link "Contact Us" [ref=e83] [cursor=pointer]:
+              - /url: /
+              - img [ref=e84] [cursor=pointer]
+              - text: Contact Us
+            - link "Logout" [ref=e86] [cursor=pointer]:
+              - /url: /
+              - img [ref=e87] [cursor=pointer]
+              - text: Logout
+            - generic [ref=e90]:
+              - text: Our
+              - link "Terms of use" [ref=e91] [cursor=pointer]:
+                - /url: /terms-of-use
+              - text: and
+              - link "Privacy and cookies policy" [ref=e92] [cursor=pointer]:
+                - /url: /privacy-policy
+    - main [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - img "+10% on Your First Deposit"
+            - heading "Welcome Boost!" [level=1] [ref=e97]:
+              - text: Welcome
+              - text: Boost!
+          - generic [ref=e98]:
+            - generic [ref=e99]: +10% on Your First Deposit 🎁
+            - paragraph [ref=e100]:
+              - text: Top up for the first time with
+              - generic [ref=e101]: $100 to $10,000
+              - text: — and we’ll boost your balance by
+              - generic [ref=e102]: 10%
+              - text: "! One-time only, make it count."
+            - button "Top up the balance" [ref=e103] [cursor=pointer]:
+              - link "Top up the balance" [ref=e104] [cursor=pointer]:
+                - /url: /billing
+        - generic [ref=e105]:
+          - generic:
+            - generic:
+              - img
+              - heading "Create a project" [level=2]
+              - paragraph: Let this be your first and definitely not last project.
+            - button "New Project":
+              - img
+              - text: New Project
+  - generic [ref=e107]:
+    - generic [ref=e108]: 👨‍💻 Dashboard
+    - paragraph [ref=e109]: Here, you can see all your created projects and their current statuses.
+    - paragraph [ref=e110]: To start a new project, simply click the "New Project" button. Dive into your projects or get started with a new one right from here!
+    - button "Got it" [ref=e111] [cursor=pointer]
+```
