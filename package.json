@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^10.18.0",
+    "@sentry/node": "^10.18.0",
     "fsevents": "^2.3.2",
     "nodemailer": "^7.0.6",
     "playwright": "^1.51.1",

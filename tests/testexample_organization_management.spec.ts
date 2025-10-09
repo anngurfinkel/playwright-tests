@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Organization_management', async ({ page }) => {
+test('organization_management', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-in');
   await page.getByTestId('sign-in-username').click();
   await page.getByTestId('sign-in-username').fill('client_test1');
