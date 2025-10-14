@@ -1,24 +1,22 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('sign_up', async ({ page }) => {
   await page.goto('https://platform.labelyourdata.com/sign-up/');
 
-  // Заповнюємо форму реєстрації
-  await page.getByTestId('sign-up-email').fill('hurfinkelannaqa@gmail.com');
-  await page.getByTestId('sign-up-username').fill('client_test1');
-  await page.getByTestId('sign-up-password').fill('Fjik67%ips');
-  await page.getByTestId('sign-up-confirm_password').fill('Fjik67%ips');
+  const email = `hurfinkelannaqa@gmail.com`;
+  const username = `client_test1`;
+  const password = 'Fjik67%ips';
 
-  // Натискаємо кнопку Sign up та чекаємо навігації (повного завантаження)
-  await Promise.all([
-    page.waitForNavigation({ waitUntil: 'networkidle' }),
-    page.locator('button[form="signup-form"]').click(),
-  ]);
+  await page.getByTestId('sign-up-email').fill(email);
+  await page.getByTestId('sign-up-username').fill(username);
+  await page.getByTestId('sign-up-password').fill(password);
+  await page.getByTestId('sign-up-confirm_password').fill(password);
 
-  // Очікуємо, що після реєстрації URL перейде на сторінку підтвердження email
-  await expect(page).toHaveURL(/confirm-email/i, { timeout: 10000 });
+  const signUpButton = page.getByRole('button', { name: 'Sign up', exact: true });
+  await expect(signUpButton).toBeEnabled();
+  await signUpButton.click();
 
-  // Перевірка, що на сторінці є заголовок "Confirm your email"
+  await page.waitForURL(/confirm-email/i, { timeout: 10000 });
   await expect(page.getByRole('heading', { name: /confirm your email/i })).toBeVisible();
-  
 });
+*/

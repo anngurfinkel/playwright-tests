@@ -1,0 +1,57 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e47] [cursor=pointer]: CL
+  - main [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Organization management" [level=1] [ref=e51]
+        - heading "personal_client_test1" [level=2] [ref=e52]
+        - generic [ref=e54]: Starter
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - generic [ref=e58] [cursor=pointer]: Members
+          - generic [ref=e59]: API Keys
+          - generic [ref=e60] [cursor=pointer]: Cloud Storage
+          - generic [ref=e61] [cursor=pointer]: Rewards Program
+        - generic [ref=e63] [cursor=pointer]:
+          - generic [ref=e65] [cursor=pointer]:
+            - generic [ref=e66] [cursor=pointer]: P
+            - generic [ref=e67] [cursor=pointer]: personal_clie...
+            - generic [ref=e69] [cursor=pointer]: Owner
+          - img [ref=e70] [cursor=pointer]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - button "View API Integration Data" [ref=e75] [cursor=pointer]
+          - button "API documentation" [disabled] [ref=e76]:
+            - img [ref=e77]
+            - text: API documentation
+          - button "Create new API key" [ref=e79] [cursor=pointer]:
+            - img [ref=e80] [cursor=pointer]
+            - text: Create new API key
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - img [ref=e84]
+            - img [ref=e87]
+          - generic [ref=e92]: Loading result...
+          - generic [ref=e93]: Please wait
+```

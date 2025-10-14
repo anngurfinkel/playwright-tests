@@ -1,0 +1,360 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]: CL
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: CL
+            - generic [ref=e51]:
+              - text: client_test1
+              - generic [ref=e52]: hurfinkelannaqa@gmail.com
+          - generic [ref=e54]: Organization
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e58] [cursor=pointer]:
+              - generic [ref=e59] [cursor=pointer]: P
+              - generic [ref=e60] [cursor=pointer]: personal_clie...
+              - generic [ref=e62] [cursor=pointer]: Owner
+            - img [ref=e63] [cursor=pointer]
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - paragraph [ref=e67]: Available balance
+              - generic [ref=e68]: $0.00
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Involved balance
+              - generic [ref=e71]: $0.00
+            - button "Top up the balance" [ref=e72] [cursor=pointer]:
+              - link "Top up the balance" [ref=e73] [cursor=pointer]:
+                - /url: /billing
+          - link "Organization management" [ref=e75] [cursor=pointer]:
+            - /url: /organization/members
+            - img [ref=e76] [cursor=pointer]
+            - text: Organization management
+          - link "Loyalty program Starter" [ref=e78] [cursor=pointer]:
+            - /url: /organization/rewards-program
+            - img [ref=e79] [cursor=pointer]
+            - text: Loyalty program
+            - generic [ref=e82] [cursor=pointer]: Starter
+          - link "Contact Us" [ref=e83] [cursor=pointer]:
+            - /url: /
+            - img [ref=e84] [cursor=pointer]
+            - text: Contact Us
+          - link "Logout" [ref=e86] [cursor=pointer]:
+            - /url: /
+            - img [ref=e87] [cursor=pointer]
+            - text: Logout
+          - generic [ref=e90]:
+            - text: Our
+            - link "Terms of use" [ref=e91] [cursor=pointer]:
+              - /url: /terms-of-use
+            - text: and
+            - link "Privacy and cookies policy" [active] [ref=e92] [cursor=pointer]:
+              - /url: /privacy-policy
+  - main [ref=e93]:
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - heading "TABLE OF CONTENT" [level=2] [ref=e96]
+        - list [ref=e97]:
+          - listitem [ref=e98]:
+            - link "1. Definitions" [ref=e99] [cursor=pointer]:
+              - /url: "#Definitions"
+          - listitem [ref=e100]:
+            - link "2. Roles & Responsibilities" [ref=e101] [cursor=pointer]:
+              - /url: "#Roles"
+          - listitem [ref=e102]:
+            - link "3. The information we collect" [ref=e103] [cursor=pointer]:
+              - /url: "#Information"
+          - listitem [ref=e104]:
+            - link "4. Cookies" [ref=e105] [cursor=pointer]:
+              - /url: "#Cookies"
+          - listitem [ref=e106]:
+            - link "5. How we use the information we collect" [ref=e107] [cursor=pointer]:
+              - /url: "#Information_collect"
+          - listitem [ref=e108]:
+            - link "6. To whom we disclose information" [ref=e109] [cursor=pointer]:
+              - /url: "#Information_disclose"
+          - listitem [ref=e110]:
+            - link "7. Data security" [ref=e111] [cursor=pointer]:
+              - /url: "#Data"
+          - listitem [ref=e112]:
+            - link "8. International data transfers" [ref=e113] [cursor=pointer]:
+              - /url: "#Data_transfers"
+          - listitem [ref=e114]:
+            - link "9. Minors and children’s privacy" [ref=e115] [cursor=pointer]:
+              - /url: "#Minors"
+          - listitem [ref=e116]:
+            - link "10. Data retention" [ref=e117] [cursor=pointer]:
+              - /url: "#Data_retention"
+          - listitem [ref=e118]:
+            - link "11. Your choices" [ref=e119] [cursor=pointer]:
+              - /url: "#Choices"
+          - listitem [ref=e120]:
+            - link "12. Changes and updates to this privacy and cookies policy" [ref=e121] [cursor=pointer]:
+              - /url: "#Changes"
+          - listitem [ref=e122]:
+            - link "13. How to contact us" [ref=e123] [cursor=pointer]:
+              - /url: "#Contact"
+      - generic [ref=e124]:
+        - heading "Privacy and cookies policy" [level=2] [ref=e125]
+        - generic [ref=e126]: "Last update: October 6, 2023"
+        - generic [ref=e127]:
+          - paragraph [ref=e128]:
+            - text: This Privacy and Cookies Policy describes the types of personal information SupportYourApp, Inc. dba Label Your Data (
+            - generic [ref=e129]: “LYD”
+            - text: ","
+            - generic [ref=e130]: “we”
+            - text: or
+            - generic [ref=e131]: “us”
+            - text: ) may collect from you or that you may provide when you visit our website located at
+            - generic [ref=e132]: platform.labelyourdata.com
+            - text: (our
+            - generic [ref=e133]: “Website”
+            - text: ), and our practices for collecting, using, protecting and disclosing that information. This Privacy and Cookies Policy also describes how we collect and use data in connection with LYD Services (as defined in
+            - generic [ref=e134]: Terms of Use
+            - text: ).
+          - paragraph [ref=e135]: This Policy is incorporated into, and is subject to, the LYD Terms of Use. Capitalized terms used but not defined in this Policy have the meaning given to them in the LYD Terms of Use.
+          - paragraph [ref=e136]: The original language of this Policy is English. LYD may make available translations of this Policy in other languages for convenience. In case of conflicts between the original English version and any translation, the English version shall prevail.
+        - generic [ref=e137]:
+          - heading "1. Definitions" [level=3] [ref=e138]
+          - paragraph [ref=e139]:
+            - generic [ref=e140]: “Client”
+            - text: means a customer of LYD.
+          - paragraph [ref=e141]:
+            - generic [ref=e142]: “Client Data“
+            - text: means video, images, reports, addresses, and other files, folders or documents in electronic form that a Client or User of the Service sends or stores within the LYD Services.
+          - paragraph [ref=e143]:
+            - generic [ref=e144]: “Personal Data”
+            - text: means any information that belongs to the Client, User or Visitor and allows to identify a natural person.
+          - paragraph [ref=e145]:
+            - generic [ref=e146]: “User”
+            - text: means an employee, agent, or representative of a Client, who primarily accesses the restricted areas of the Website by logging in to use the LYD Services in that capacity.
+          - paragraph [ref=e147]:
+            - generic [ref=e148]: “Visitor”
+            - text: means an individual other than a User, who uses the public area of LYD Services that does not require logging in.
+        - generic [ref=e149]:
+          - heading "2. Roles & Responsibilities" [level=3] [ref=e150]
+          - paragraph [ref=e151]: LYD is the controller of your Personal Data, as described in this Privacy and Cookies Policy, unless otherwise stated.
+          - paragraph [ref=e152]: Please note that this Privacy and Cookies Policy does not apply to the extent that we process Personal Data in the role of a processor (or a comparable role such as a “service provider” in certain jurisdictions) on behalf of our Clients, including where we collect, use, share or process Personal Data via our services. In such cases, LYD does not own or control any of the Client Data uploaded by a Client or User via the LYD Services. The Client or the User is the data controller under the applicable regulation for any Client Data containing Personal Data.
+          - paragraph [ref=e153]: If your Personal Data has been submitted to us by or on behalf of a LYD Client and you wish to exercise any rights you may have under applicable data protection laws, please inquire with the applicable Client directly.
+          - paragraph [ref=e154]: LYD is not responsible for the content of the Client Data nor is LYD responsible for the manner in which the Client or User collects, handles disclosure, distributes or otherwise processes such information.
+        - generic [ref=e155]:
+          - heading "3. The information we collect" [level=3] [ref=e156]
+          - paragraph [ref=e157]: We collect different types of information from or through the LYD Services.
+          - heading "3.1 Information you provide directly to LYD" [level=4] [ref=e158]
+          - paragraph [ref=e159]:
+            - generic [ref=e160]: Account signup
+            - text: ": When you sign up for an account to access the LYD Services, we ask for information like your name, email address, company name and country to complete the account signup process. You may also provide us with more information such as your photo, time zone, etc."
+          - paragraph [ref=e161]:
+            - generic [ref=e162]: Payment processing
+            - text: ": When you buy something from us, we ask you to provide your name, contact information, or other payment account information."
+          - paragraph [ref=e163]:
+            - generic [ref=e164]: Interactions with LYD
+            - text: ": We may record, analyze and use your interactions with us, including email, telephone, and chat conversations with our sales and customer support professionals, for improving our interactions with you and other customers."
+          - heading "3.2 Information Collected by Clients" [level=4] [ref=e165]
+          - paragraph [ref=e166]: A Client or User may store or upload Client Data into the LYD Services. LYD has no direct relationship with the individuals whose Personal Data may host as part of Client Data. Each Client is responsible for providing notice to its customers and third persons concerning the purpose for which Client collects their Personal Data and how this Personal Data is processed in or through the LYD Services as part of Client Data.
+          - heading "3.3 Automatically Collected Information" [level=4] [ref=e167]
+          - paragraph [ref=e168]:
+            - generic [ref=e169]: Information from browsers, devices and servers
+            - text: ": When you visit our websites, we collect information that web browsers, mobile devices and servers make available, such as the internet protocol address, browser type, language preference, time zone, referring URL, date and time of access, operating system, mobile device manufacturer and mobile network information. We include these in our log files to understand more about visitors to our websites."
+          - paragraph [ref=e170]:
+            - generic [ref=e171]: Information from application logs and mobile analytics
+            - text: ": We collect information about your use of our products, services and mobile applications from application logs and in-house usage analytics tools, and use it to understand how your use and needs can improve our products. This information includes clicks, scrolls, features accessed, access time and frequency, errors generated, performance data, storage utilized, user settings and configurations, and devices used to access and their locations."
+          - heading "3.4 Information that we collect from third parties" [level=4] [ref=e172]
+          - paragraph [ref=e173]:
+            - generic [ref=e174]: Signups using federated authentication service providers
+            - text: ": You can log in to LYD Services using supported federated authentication service providers such as Gmail. This service will authenticate your identity and give you the option to share certain personal information with us, such as your name and email address. You should check your privacy settings on integrated service to understand what information that integrated service makes available to us, and make changes as appropriate. Please review integrated service’s terms of use and privacy policy carefully before using their services and connecting to LYD Services."
+          - paragraph [ref=e175]:
+            - generic [ref=e176]: Referrals
+            - text: ": If someone has referred any of our products or services to you through any of our referral programs, that person may have provided us your name, email address and other personal information. You may contact us at privacy@labelyourdata.com to request that we remove your information from our database. If you provide us information about another person, or if another person gives us your information, we will only use that information for the specific reason for which it was provided to us."
+          - paragraph [ref=e177]:
+            - generic [ref=e178]: Information from our reselling partners and service providers
+            - text: ": If you contact any of our reselling partners, or otherwise express interest in any of our products or services to them, the reselling partner may pass your name, email address, company name and other information to LYD. If you register for or attend an event that is sponsored by LYD, the event organizer may share your information with us. LYD may also receive information about you from review sites if you comment on any review of our products and services, and from other third-party service providers that we engage for marketing our products and services."
+          - paragraph [ref=e179]:
+            - generic [ref=e180]: Information from social media sites and other publicly available sources
+            - text: ": When you provide feedback or reviews about our products, interact, or engage with us on marketplaces, review sites or social media sites such as Facebook, Twitter, LinkedIn and Instagram through posts, comments, questions and other interactions, we may collect such publicly available information, including profile information, to allow us to connect with you, improve our products, better understand user reactions and issues, or to reproduce and publish your feedback on our websites. We must tell you that once collected, this information may remain with us even if you delete it from these sites. LYD may also add and update information about you, from other publicly available sources."
+        - generic [ref=e181]:
+          - heading "4. Cookies" [level=3] [ref=e182]
+          - paragraph [ref=e183]: We and our third-party partners may use various technologies to collect and store your personal data, which may include cookies and similar tracking technologies. We use this information to measure the performance of our email campaigns, to provide analytical information, enhance the effectiveness of our services, and for other purposes described in this Privacy and Cookies Policy.
+          - paragraph [ref=e184]: Cookies are small text files sent by us to your computer or mobile device, which enable us to improve the Website. They are unique to your account or your browser. Session-based cookies last only while your browser is open and are automatically deleted when you close your browser. Persistent cookies last until you or your browser delete them or until they expire. The cookies placed via the Website cannot damage your device or the files stored on it.
+          - paragraph [ref=e185]: You will be notified about the use of cookies when you first visit our Website. If you do not want us or our partners to collect information through the use of cookies, you can set up your choices via the Cookies Preference Center at any time.
+          - paragraph [ref=e186]: Most browsers give you the ability to manage cookies to suit you. In some browsers, you can set up rules to manage cookies on a site-by-site basis, giving you more fine-grained control over your privacy. This means you can disallow cookies from all sites except those you trust.
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - link "Google Chrome" [ref=e189] [cursor=pointer]:
+                - /url: https://support.google.com/chrome/answer/95647?hl=en-GB
+            - listitem [ref=e190]:
+              - link "Internet Explorer" [ref=e191] [cursor=pointer]:
+                - /url: https://support.microsoft.com/ru-ru/topic/%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2-cookie-ad01aa7e-66c9-8ab2-7898-6652c100999d
+            - listitem [ref=e192]:
+              - link "Mozilla Firefox" [ref=e193] [cursor=pointer]:
+                - /url: https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer
+            - listitem [ref=e194]:
+              - link "Safari (Desktop)" [ref=e195] [cursor=pointer]:
+                - /url: https://support.apple.com/ru-ru/guide/safari/sfri11471/mac
+            - listitem [ref=e196]:
+              - link "Safari (Mobile)" [ref=e197] [cursor=pointer]:
+                - /url: https://support.apple.com/en-us/105082
+            - listitem [ref=e198]:
+              - link "Microsoft Edge" [ref=e199] [cursor=pointer]:
+                - /url: https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d
+            - listitem [ref=e200]:
+              - link "Opera" [ref=e201] [cursor=pointer]:
+                - /url: https://blogs.opera.com/tips-and-tricks/
+          - paragraph [ref=e202]: For other browsers, please consult the documentation provided by your browser manufacturer. If you limit the ability of websites and applications to set cookies, you may worsen your overall user experience and/or lose the ability to access the service, since it will no longer be personalized for you. It may also stop you from saving customized settings, like login information.
+          - paragraph [ref=e203]:
+            - text: To find out more about cookies, visit
+            - link "this site" [ref=e204] [cursor=pointer]:
+              - /url: https://allaboutcookies.org/
+            - text: .
+        - generic [ref=e205]:
+          - heading "5. How we use the information we collect" [level=3] [ref=e206]
+          - paragraph [ref=e207]: "We use the information that we collect in a variety of ways in providing the LYD Services and operating our business, including the following:"
+          - heading "5.1 Operations" [level=4] [ref=e208]
+          - paragraph [ref=e209]: We use the information – other than Client Data – to operate, maintain, enhance and provide all features of LYD Services.
+          - list [ref=e210]:
+            - listitem [ref=e211]: To set up and maintain your account, and to do all other things required for providing our services;
+            - listitem [ref=e212]: To provide customer support, and to analyze and improve our interactions with customers;
+            - listitem [ref=e213]: To detect and prevent fraudulent transactions and other illegal activities, to report spam, and to protect the rights and interests of LYD, LYD’s users, third parties and the public.
+          - paragraph [ref=e214]: We process Client Data solely to provide the Services that were requested by the Client.
+          - heading "5.2 Improvements" [level=4] [ref=e215]
+          - paragraph [ref=e216]: "We use the information:"
+          - list [ref=e217]:
+            - listitem [ref=e218]: To understand how users use our products and services, to monitor and prevent problems, and to improve our products and services;
+            - listitem [ref=e219]: To analyze trends, administer our websites, and track visitor navigations on our websites to understand what visitors are looking for and to better help them.
+          - heading "5.3 Communications" [level=4] [ref=e220]
+          - paragraph [ref=e221]: "In addition to the purposes mentioned above, we may use your information for the following purposes:"
+          - list [ref=e222]:
+            - listitem [ref=e223]: To communicate with you (such as through email) about products and materials that you have downloaded and services that you have signed up for, changes to this Privacy and Cookies Policy, changes to the Terms of Use, or important notices;
+            - listitem [ref=e224]: To keep you posted on new products and services, upcoming events, offers, promotions and other information that we think will be of interest to you;
+            - listitem [ref=e225]: To ask you to participate in surveys, or to solicit feedback on our products and services.
+          - heading "5.4 Analytics" [level=4] [ref=e226]
+          - list [ref=e227]:
+            - listitem [ref=e228]: To update, expand and analyze our records, identify new customers, and provide products and services that may be of interest to you;
+            - listitem [ref=e229]: To monitor and improve marketing campaigns and make suggestions relevant to the user.
+          - heading "5.5 Legal Bases for Processing Personal Data (for United Kingdom and European Economic Area and other relevant jurisdictions)" [level=4] [ref=e230]
+          - paragraph [ref=e231]: "If you are an individual in the United Kingdom, the European Economic Area (EEA), or of another relevant jurisdiction, we collect and process information about you only where we have a legal basis or bases for doing so under applicable laws. The legal bases depend on the products and services that your organization has purchased from LYD, how such products and services are used, and how you choose to interact and communicate with LYD’s websites, systems, and whether you attend LYD events. This means we collect and use your Personal Data only where:"
+          - list [ref=e232]:
+            - listitem [ref=e233]: We need it to operate and provide you with our products and services, provide customer support and personalized features, and to protect the safety and security of our products and services;
+            - listitem [ref=e234]: It satisfies a legitimate interest of LYD’s (which is not overridden by your data protection interests and rights), such as for research and development, to provide information to you about our products and services that we believe you and your organization may find useful, and to protect our legal rights and interests;
+            - listitem [ref=e235]: You give us consent to do so for a specific purpose; or
+            - listitem [ref=e236]: We need to comply with a legal obligation.
+          - paragraph [ref=e237]:
+            - text: Where we rely on legitimate interests to process your Personal Data, you can object to that processing as described below under
+            - generic [ref=e238]: “YOUR CHOICES”
+            - text: In response to your objection, we will stop processing your information for the relevant purposes unless we have compelling grounds in the circumstances or the processing is necessary in the context of legal claims. LYD may also process other information that constitutes your Personal Data for direct marketing purposes and you have a right to object to LYD’s use of your Personal Data for this purpose at any time.
+        - generic [ref=e239]:
+          - heading "6. To whom we disclose information" [level=3] [ref=e240]
+          - paragraph [ref=e241]: "We will disclose the Client Data that we collect or store on the LYD Services to Annotators through Remoter.me for the purpose of Services provision as specified in the Terms of Use. We may also disclose information to third parties in the following circumstances:"
+          - heading "6.1 Other Users in Your Company Account" [level=4] [ref=e242]
+          - paragraph [ref=e243]: Certain information about your use of the LYD Services is available to the administrator(s) of your Account and, depending on the settings chosen by the Users of the Account, also to other Users for the purposes of providing the LYD Services.
+          - heading "6.2 Service Providers" [level=4] [ref=e244]
+          - paragraph [ref=e245]: We work with third party service providers who provide website, application development, hosting, maintenance, security and fraud detection, and other services for us. These third parties may have access to, or process Personal Data or Client Data as part of providing those services for us. We limit the information provided to these service providers to that which is reasonably necessary for them to perform their functions, and our contracts with them require them to maintain the confidentiality of such information.
+          - heading "6.3 Social Media" [level=4] [ref=e246]
+          - paragraph [ref=e247]:
+            - text: LYD’s websites may use social media features, such as the Facebook “like” button, LinkedIn and Twitter sharing features, and other similar widgets (
+            - generic [ref=e248]: “Social Media Features”
+            - text: ). You may be given the option by such Social Media Features to post information about your activities on a website to a profile page of yours that is provided by a third-party social media network in order to share content with others within your network. Social Media Features are either hosted by the respective social media network, or hosted directly on our websites. To the extent the Social Media Features are hosted by the respective social media networks and you click through to these from our Website, the latter may receive information showing that you have visited our Website. If you are logged in to your social media account, it is possible that the respective social media network can link your visit to our websites with your social media profile. Your interactions with Social Media Features are governed by the privacy policies (and any other applicable terms) of the respective companies that provide the relevant Social Media Features.
+          - heading "6.4 Advertising and Marketing" [level=4] [ref=e249]
+          - paragraph [ref=e250]:
+            - text: "We partner with third-party ad networks to display advertising on our Website or to manage our advertising on other sites. Our ad network partner uses cookies and web beacons to collect information about your activities on this and other websites to provide you with targeted advertising based on your interests. If you wish not to have this information used for the purpose of serving you targeted ads, you may opt-out by using these services:"
+            - link "https://optout.networkadvertising.org/" [ref=e251] [cursor=pointer]:
+              - /url: https://optout.networkadvertising.org/
+            - text: or
+            - link "https://optout.aboutads.info/" [ref=e252] [cursor=pointer]:
+              - /url: https://optout.aboutads.info/
+            - text: "(or if located in the European Union, by clicking here:"
+            - link "http://www.youronlinechoices.eu/" [ref=e253] [cursor=pointer]:
+              - /url: http://www.youronlinechoices.eu/
+            - text: ). Please note this does not opt you out of being served advertising, you will continue to receive generic ads.
+          - heading "6.5 Non Personally Identifiable Information" [level=4] [ref=e254]
+          - paragraph [ref=e255]: We may make certain automatically-collected, aggregated, or otherwise non-personally-identifiable information available to third parties for various purposes, including (i) compliance with various reporting obligations; (ii) for business or marketing purposes; or (iii) to assist such parties in understanding our Clients’, Users’ and Visitors’ interests, habits, and usage patterns for certain programs, content, services, and/or functionality available through the LYD Services, all of the foregoing being subject to additional limits on use of your data as stated in this Privacy and Cookies Policy.
+          - heading "6.6 Law Enforcement, Legal Process and Compliance" [level=4] [ref=e256]
+          - paragraph [ref=e257]: We may disclose Personal Data or other information if required to do so by law or in the good-faith belief that such action is necessary to comply with applicable laws, in response to a facially valid court order, judicial or other government subpoena or warrant, or to otherwise cooperate with law enforcement or other governmental agencies. We also reserve the right to disclose Personal Data or other information that we believe, in good faith, is appropriate or necessary to (i) take precautions against liability, (ii) protect ourselves or others from fraudulent, abusive, or unlawful uses or activity, (iii) investigate and defend ourselves against any third-party claims or allegations, (iv) protect the security or integrity of the LYD Services and any facilities or equipment used to make the LYD Services available, or (v) protect our property or other legal rights, enforce our contracts, or protect the rights, property, or safety of others.
+          - heading "6.7 Change of Ownership" [level=4] [ref=e258]
+          - paragraph [ref=e259]: Information about Users and Visitors, including Personal Data, may be disclosed and otherwise transferred to an acquirer, successor or assignee as part of any merger, acquisition, debt financing, sale of assets, or similar transaction, as well as in the event of an insolvency, bankruptcy, or receivership in which information is transferred to one or more third parties as one of our business assets and only if the recipient of the User or Visitor Data commits to a Privacy and Cookies Policy that has terms substantially consistent with this Privacy and Cookies Policy.
+          - paragraph [ref=e260]: Client Data may be physically or electronically transferred to an acquirer, or successor or assignee as part of any merger, acquisition, debt financing, sale of assets, or similar transaction, as well as in the event of an insolvency, bankruptcy, or receivership in which information is transferred to one or more third parties as one of our business assets, for the sole purpose of continuing the operation of the LYD Services, and only if the recipient of the Client Data commits to a privacy policy that has terms substantially consistent with this Privacy and Cookies Policy.
+        - generic [ref=e261]:
+          - heading "7. Data security" [level=3] [ref=e262]
+          - paragraph [ref=e263]:
+            - text: At LYD, we take data security very seriously. We have taken steps to implement appropriate administrative, technical safeguards to prevent unauthorized access, use, modification, disclosure or destruction of the information you entrust to us. However, no security system is perfect, and due to the inherent nature of the Internet, we cannot guarantee that data, including Personal Data, is absolutely safe from intrusion or other unauthorized access by others. You are responsible for protecting your password(s) and other authentication factors, as well as maintaining the security of your devices. If you believe your Personal Data has been compromised, please contact us as set forth in the
+            - generic [ref=e264]: “How to contact us”
+            - text: section. If we learn of a security systems breach, we will inform you and the authorities of the occurrence of the breach in accordance with applicable law.
+        - generic [ref=e265]:
+          - heading "8. International data transfers" [level=3] [ref=e266]
+          - paragraph [ref=e267]: LYD may transfer your Personal Data to countries other than the one in which you live, including transfers to the European Union. To the extent that Personal Data is transferred abroad, LYD will ensure compliance with the requirements of the applicable laws in the respective jurisdiction in line with LYD’s obligations. LYD uses Standard Contractual Clauses approved by the European Commission (and the equivalent standard contractual clauses for the UK where appropriate) for transfers to countries not subject to an adequacy decision by the European Commission or your local legislature and/or regulator.
+        - generic [ref=e268]:
+          - heading "9. Minors and children’s privacy" [level=3] [ref=e269]
+          - paragraph [ref=e270]: Protecting the privacy of young children is especially important. LYD Services are not directed nor intended to children under the age of 18, and we do not knowingly collect Personal Data from children under the age of 18. If you are under 18 years of age, then please do not use or access the LYD Services at any time or in any manner. If we learn that Personal Data has been collected on the LYD Services from persons under 18 years of age and without verifiable parental consent, then we will take the appropriate steps to delete this information.
+        - generic [ref=e271]:
+          - heading "10. Data retention" [level=3] [ref=e272]
+          - paragraph [ref=e273]: Protecting the privacy of young children is especially important. LYD Services are not directed nor intended to children under the age of 18, and we do not knowingly collect Personal Data from children under the age of 18. If you are under 18 years of age, then please do not use or access the LYD Services at any time or in any manner. If we learn that Personal Data has been collected on the LYD Services from persons under 18 years of age and without verifiable parental consent, then we will take the appropriate steps to delete this information.
+        - generic [ref=e274]:
+          - heading "11. Your choices" [level=3] [ref=e275]
+          - heading "11.1 Your rights with respect to information we hold about you as a controller" [level=4] [ref=e276]
+          - list [ref=e277]:
+            - listitem [ref=e278]:
+              - generic [ref=e279]: Right to access
+              - text: – you have the right to know which data we hold about you (if any).
+            - listitem [ref=e280]:
+              - generic [ref=e281]: Right to data rectification
+              - text: – you have the right to require corrections to your Personal Data in case they are inaccurate or incomplete.
+            - listitem [ref=e282]:
+              - generic [ref=e283]: Right to data deletion
+              - text: – you have the right under certain conditions to request the deletion of your Personal Data including in situations where the processing of your Personal Data is no longer necessary for the purposes for which it was collected, or if the processing of your Personal Data was based on your consent and you wish to withdraw your consent, and there are no other grounds for processing your Personal Data.
+            - listitem [ref=e284]:
+              - generic [ref=e285]: Right to restriction of processing
+              - text: – You may also have the right to request to restrict the use of your information in certain circumstances, such as when you have objected to our use of your data but we need to verify whether we have overriding legitimate grounds to use it.
+            - listitem [ref=e286]:
+              - generic [ref=e287]: Right to data portability
+              - text: – You have the right to transfer your information to a third party in a structured, commonly used and machine-readable format, in circumstances where the information is processed with your consent or by automated means.
+            - listitem [ref=e288]:
+              - generic [ref=e289]: Right to object
+              - text: – You have the right to object to the use of your information in certain circumstances, such as the use of your personal information for direct marketing.
+            - listitem [ref=e290]: Right to complain – You have the right to complain to the appropriate supervisory authority if you have any grievance against the way we collect, use or share your information. This right may not be available to you if there is no supervisory authority dealing with data protection in your country.
+          - paragraph [ref=e291]:
+            - text: We respect your privacy rights and provide you with reasonable access to the Personal Data that you may have provided through your use of the LYD Services. If you wish to access or amend any other Personal Data we hold about you, or to request that we delete or transfer any information about you that we have obtained from an integrated service, you may contact us as set forth in the
+            - generic [ref=e292]: “How to contact us”
+            - text: section. At your request, we will have any reference to you deleted or blocked in our database. Additionally,
+          - list [ref=e293]:
+            - listitem [ref=e294]: You may update, correct, or delete your Account information and preferences at any time by accessing your Account settings page on the LYD Services. Please note that while any changes you make will be reflected in active user databases instantly or within a reasonable period of time, we may retain all information you submit for backups, archiving, prevention of fraud and abuse, analytics, satisfaction of legal obligations, or where we otherwise reasonably believe that we have a legitimate reason to do so.
+            - listitem [ref=e295]: You may decline to share certain Personal Data with us, in which case we may not be able to provide to you some of the features and functionality of the Service.
+            - listitem [ref=e296]: "Optional information: You can choose not to provide optional profile information such as your photo. You can also delete or change your optional profile information."
+            - listitem [ref=e297]: You can always choose not to fill in non-mandatory fields when you submit any form linked to our websites.
+          - paragraph [ref=e298]: At any time, you may object to the processing of your Personal Data, on legitimate grounds, except if otherwise permitted by applicable law. If you believe your right to privacy granted by applicable data protection laws has been infringed upon, please contact LYD at privacy@labelyourdata.com.
+          - heading "11.2 Opting out from Commercial Communications" [level=4] [ref=e299]
+          - paragraph [ref=e300]:
+            - text: You may opt out of receiving newsletters and other non-essential messages by using the ‘unsubscribe' function included in all such messages or by sending an email to the address provided in the
+            - generic [ref=e301]: “How to contact us”
+            - text: section. Please note that you will continue to receive essential notices and emails such as account notification emails (password change, renewal reminders, etc.), security incident alerts, security and privacy update notifications, and essential transactional and payment related emails.
+          - heading "11.3 Information processed on LYD Client’s behalf" [level=4] [ref=e302]
+          - paragraph [ref=e303]: LYD has no direct relationship with the Client’s customers or third party whose Personal Data it may process on behalf of a Client. An individual who seeks access, or who seeks to correct, amend, delete inaccurate data or withdraw consent for further contact should direct his or her query to the Client or User they deal with directly.
+          - paragraph [ref=e304]: LYD Clients can delete, amend or block access to any Personal Data inside LYD application, or by contacting LYD support.
+        - generic [ref=e305]:
+          - heading "12. Changes and updates to this privacy and cookies policy" [level=3] [ref=e306]
+          - paragraph [ref=e307]: Please revisit this page periodically to stay aware of any changes to this Privacy and Cookies Policy, which we may update from time to time. If we modify the Privacy and Cookies Policy, we will make it available through the LYD Services, and indicate the date of the latest revision, and will comply with applicable law. Your continued use of the LYD Services after the revised Privacy and Cookies Policy has become effective indicates that you have read, understood and agreed to the current version of the Privacy and Cookies Policy.
+        - generic [ref=e308]:
+          - heading "13. How to contact us" [level=3] [ref=e309]
+          - paragraph [ref=e310]:
+            - text: Please contact us with any questions or comments about this Privacy and Cookies Policy, your Personal Data, our use and disclosure practices, or your consent choices by email at
+            - link "privacy@labelyourdata.com." [ref=e311] [cursor=pointer]:
+              - /url: "mailto:privacy@labelyourdata.com. "
+```

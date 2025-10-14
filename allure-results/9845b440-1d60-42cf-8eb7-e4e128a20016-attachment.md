@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]: CL
+        - link "Top up the balance" [ref=e48] [cursor=pointer]:
+          - /url: /billing
+  - main [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - heading "Organization management" [level=1] [ref=e52]
+        - heading "personal_client_test1" [level=2] [ref=e53]
+        - generic [ref=e55]: Starter
+      - generic [ref=e56]:
+        - generic [ref=e58]:
+          - generic [ref=e59] [cursor=pointer]: Members
+          - generic [ref=e60]: API Keys
+          - generic [ref=e61] [cursor=pointer]: Cloud Storage
+          - generic [ref=e62] [cursor=pointer]: Rewards Program
+        - generic [ref=e64] [cursor=pointer]:
+          - generic [ref=e66] [cursor=pointer]:
+            - generic [ref=e67] [cursor=pointer]: P
+            - generic [ref=e68] [cursor=pointer]: personal_clie...
+            - generic [ref=e70] [cursor=pointer]: Owner
+          - img [ref=e71] [cursor=pointer]
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - button "View API Integration Data" [ref=e76] [cursor=pointer]
+          - button "API documentation" [disabled] [ref=e77]:
+            - img [ref=e78]
+            - text: API documentation
+          - button "Create new API key" [ref=e80] [cursor=pointer]:
+            - img [ref=e81] [cursor=pointer]
+            - text: Create new API key
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - img [ref=e85]
+            - img [ref=e88]
+          - generic [ref=e93]: Loading result...
+          - generic [ref=e94]: Please wait
+```

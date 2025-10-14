@@ -1,0 +1,51 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8] [cursor=pointer]
+      - generic [ref=e31]:
+        - link "Dashboard" [ref=e32] [cursor=pointer]:
+          - /url: /
+          - img [ref=e33] [cursor=pointer]
+          - text: Dashboard
+        - link "Calculator" [ref=e36] [cursor=pointer]:
+          - /url: /calculator
+          - img [ref=e37] [cursor=pointer]
+          - text: Calculator
+        - link "Billing" [ref=e42] [cursor=pointer]:
+          - /url: /billing
+          - img [ref=e43] [cursor=pointer]
+          - text: Billing
+      - generic [ref=e47] [cursor=pointer]: CL
+  - main [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - img "+10% on Your First Deposit"
+          - heading "Welcome Boost!" [level=1] [ref=e52]:
+            - text: Welcome
+            - text: Boost!
+        - generic [ref=e53]:
+          - generic [ref=e54]: +10% on Your First Deposit 🎁
+          - paragraph [ref=e55]:
+            - text: Top up for the first time with
+            - generic [ref=e56]: $100 to $10,000
+            - text: — and we’ll boost your balance by
+            - generic [ref=e57]: 10%
+            - text: "! One-time only, make it count."
+          - button "Top up the balance" [ref=e58] [cursor=pointer]:
+            - link "Top up the balance" [ref=e59] [cursor=pointer]:
+              - /url: /billing
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - img [ref=e63]
+          - heading "Create a project" [level=2] [ref=e68]
+          - paragraph [ref=e69]: Let this be your first and definitely not last project.
+        - button "New Project" [ref=e70] [cursor=pointer]:
+          - img [ref=e71] [cursor=pointer]
+          - text: New Project
+```

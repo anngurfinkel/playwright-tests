@@ -1,0 +1,54 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e6]:
+    - img [ref=e7]
+    - heading "Sign up to Label Your Data" [level=1] [ref=e30]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: Email
+        - textbox "Your email" [ref=e34]: qwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyq@gmail.com
+      - generic [ref=e35]:
+        - generic [ref=e36]: User Name
+        - textbox "User Name" [ref=e37]: qwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwertyqwerty
+      - generic [ref=e38]:
+        - generic [ref=e39]: Password
+        - textbox "Your password" [ref=e40]: Fjik67%ipsFjik67%ipsFjik67%ips
+        - img [ref=e42] [cursor=pointer]
+      - generic [ref=e46]:
+        - generic [ref=e47]: Confirm password
+        - textbox "Confirm password" [ref=e48]: Fjik67%ipsFjik67%ipsFjik67%ips
+    - button "Sign up" [ref=e49] [cursor=pointer]
+    - generic [ref=e50]: OR
+    - button "Google Sign up with Google" [ref=e52] [cursor=pointer]:
+      - img "Google"
+      - text: Sign up with Google
+    - generic [ref=e53]:
+      - text: By clicking Sign up, I confirm that I have read and agree with
+      - link "Terms and conditions" [ref=e54] [cursor=pointer]:
+        - /url: /terms-of-use
+    - generic [ref=e55]:
+      - text: Have an account already?
+      - link "Sign in" [ref=e56] [cursor=pointer]:
+        - /url: /sign-in
+  - generic [ref=e57]:
+    - generic [ref=e58]:
+      - img
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: error
+        - generic [ref=e61]: REASON - Internal Server Error
+      - img [ref=e63] [cursor=pointer]
+    - generic [ref=e65]:
+      - img
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: error
+        - generic [ref=e68]: DETAILS -
+      - img [ref=e70] [cursor=pointer]
+    - generic [ref=e72]:
+      - img
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: error
+        - generic [ref=e75]: ERROR - Can't signup in CVAT.
+      - img [ref=e77] [cursor=pointer]
+```

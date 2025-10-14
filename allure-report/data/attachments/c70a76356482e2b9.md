@@ -1,0 +1,39 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e6]:
+  - img [ref=e7]
+  - heading "Sign up to Label Your Data" [level=1] [ref=e30]
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]: Email
+      - textbox "Your email" [ref=e34]: hurfinkelannaqa@gmail.com
+    - generic [ref=e35]:
+      - generic [ref=e36]: User Name
+      - textbox "User Name" [ref=e37]: client_test1
+      - generic [ref=e38]:
+        - generic [ref=e39] [cursor=pointer]: client_test1123
+        - generic [ref=e40] [cursor=pointer]: client_test1s
+        - generic [ref=e41] [cursor=pointer]: client_test11
+      - generic [ref=e42]: This username already exists
+    - generic [ref=e43]:
+      - generic [ref=e44]: Password
+      - textbox "Your password" [ref=e45]: Fjik67%ips
+      - img [ref=e47] [cursor=pointer]
+    - generic [ref=e51]:
+      - generic [ref=e52]: Confirm password
+      - textbox "Confirm password" [ref=e53]: Fjik67%ips
+  - button "Sign up" [ref=e54] [cursor=pointer]
+  - generic [ref=e55]: OR
+  - button "Google Sign up with Google" [ref=e57] [cursor=pointer]:
+    - img "Google"
+    - text: Sign up with Google
+  - generic [ref=e58]:
+    - text: By clicking Sign up, I confirm that I have read and agree with
+    - link "Terms and conditions" [ref=e59] [cursor=pointer]:
+      - /url: /terms-of-use
+  - generic [ref=e60]:
+    - text: Have an account already?
+    - link "Sign in" [ref=e61] [cursor=pointer]:
+      - /url: /sign-in
+```
