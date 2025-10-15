@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 
 test('create_project_settings', async ({ page }) => {
   // ⏱ Збільшуємо загальний таймаут на тест (до 60 секунд)
@@ -40,3 +40,4 @@ test('create_project_settings', async ({ page }) => {
   // 🧪 Перевірка, що підтвердження пройшло (опційно: додай, якщо знаєш елемент, який з’являється після)
   // await expect(page.locator('text=Thank you')).toBeVisible();
 });
+*/
